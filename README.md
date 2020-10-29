@@ -15,8 +15,8 @@ To date the changes have been:
 
 **This is very much a work in progress; assume nothing has been tested and nothing works!**
 
-<img src="./images/midi2cv_kosmo.jpg" alt="schematic" width="800">
-<img src="./images/midi2cv_kosmo2.jpg" alt="schematic" width="800">
+<img src="./Images/midi2cv_ao.jpg" alt="schematic" width="800">
+<img src="./Images/midi2cv_ao2.jpg" alt="schematic" width="800">
 
 
 Following is quoted from the project from which this is forked:
