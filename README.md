@@ -13,6 +13,11 @@ To date the changes have been:
 * Added CLOCK/4 output; CLOCK will become 4 per quarter note.
 * Added dummy 0R and 10M resistors to non NOTE CV outputs. This is to create PCB pads which could be used in a later multi-voice capable version.
 
+Possible further changes:
+
+* Make all CV outputs 0-10V, with feedback capacitor, similar to Befaco MIDI Thing; 300R output resistor in-loop
+* Convert from Arduino Nano to Teensy 4.0 in anticipation of USB MIDI capable version
+
 **This is very much a work in progress; assume nothing has been tested and nothing works!**
 
 <img src="./Images/midi2cv_ao.jpg" alt="schematic" width="800">
