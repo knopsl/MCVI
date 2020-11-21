@@ -480,7 +480,6 @@ NoConn ~ 1400 2600
 NoConn ~ 1400 3700
 NoConn ~ 2400 3800
 NoConn ~ 2400 3700
-NoConn ~ 2400 3400
 NoConn ~ 2400 2900
 NoConn ~ 2400 2600
 NoConn ~ 2400 2500
@@ -671,7 +670,7 @@ Text Label 2600 5750 2    50   ~ 0
 MIDI4
 Text Label 2500 3100 0    50   ~ 0
 SW3
-Text Label 2500 3300 0    50   ~ 0
+Text Label 2500 3200 0    50   ~ 0
 SW1
 Text Label 1300 2900 2    50   ~ 0
 CLOCK_A
@@ -686,7 +685,7 @@ MIDI_LED_A
 Text Label 1300 3400 2    50   ~ 0
 DAC2_SEL
 $Sheet
-S 8300 5950 550  600 
+S 6900 5500 1900 900 
 U 5F990527
 F0 "Panel components" 50
 F1 "panelcomps.sch" 50
@@ -774,16 +773,16 @@ SW2
 Text Label 2050 1300 0    50   ~ 0
 SW3
 $Comp
-L Connector_Generic:Conn_01x03 J3
+L Connector_Generic:Conn_01x06 J3
 U 1 1 5FA88D62
-P 1750 1300
+P 1750 1200
 AR Path="/5FA88D62" Ref="J3"  Part="1" 
 AR Path="/5F990527/5FA88D62" Ref="J?"  Part="1" 
-F 0 "J3" H 1668 875 50  0000 C CNN
-F 1 "Conn_01x03" H 1668 966 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 1750 1300 50  0001 C CNN
-F 3 "~" H 1750 1300 50  0001 C CNN
-	1    1750 1300
+F 0 "J3" H 1750 700 50  0000 C CNN
+F 1 "Conn_01x06" H 1750 800 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical" H 1750 1200 50  0001 C CNN
+F 3 "~" H 1750 1200 50  0001 C CNN
+	1    1750 1200
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1003,7 +1002,27 @@ Wire Wire Line
 Connection ~ 8700 2150
 Wire Wire Line
 	8700 2150 9000 2150
-NoConn ~ 2400 3500
 NoConn ~ 2400 3600
-NoConn ~ 2500 3200
+Text Label 2500 3300 0    50   ~ 0
+BUT
+Wire Wire Line
+	2400 3400 2500 3400
+Text Label 2500 3400 0    50   ~ 0
+PROG_LED1
+Wire Wire Line
+	2400 3500 2500 3500
+Text Label 2500 3500 0    50   ~ 0
+PROG_LED2
+Wire Wire Line
+	1950 900  2050 900 
+Wire Wire Line
+	1950 1000 2050 1000
+Wire Wire Line
+	1950 1100 2050 1100
+Text Label 2050 1000 0    50   ~ 0
+PROG_LED1
+Text Label 2050 900  0    50   ~ 0
+BUT
+Text Label 2050 1100 0    50   ~ 0
+PROG_LED2
 $EndSCHEMATC

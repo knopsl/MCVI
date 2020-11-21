@@ -17,6 +17,7 @@ Possible further changes:
 
 * Make all CV outputs 0-10V, with feedback capacitor, similar to Befaco MIDI Thing; 300R output resistor in-loop
 * Convert from Arduino Nano to Teensy 4.0 in anticipation of USB MIDI capable version
+* Use MCP4922 instead of MCP4822, with 5V reference
 
 **This is very much a work in progress; assume nothing has been tested and nothing works!**
 
