@@ -12,6 +12,7 @@ To date the changes have been:
 * Added CLOCK/4 output; CLOCK will become 4 per quarter note.
 * Buffered digital outputs.
 * PCB layout for Kosmo format.
+* Option to use either hard or soft serial.
 
 Possible further changes:
 

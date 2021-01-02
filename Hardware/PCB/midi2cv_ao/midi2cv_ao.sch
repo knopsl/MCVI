@@ -36,12 +36,12 @@ DAC2_SEL
 $Comp
 L power:+5V #PWR07
 U 1 1 5F8F76F4
-P 2100 2100
-F 0 "#PWR07" H 2100 1950 50  0001 C CNN
-F 1 "+5V" H 2115 2273 50  0000 C CNN
-F 2 "" H 2100 2100 50  0001 C CNN
-F 3 "" H 2100 2100 50  0001 C CNN
-	1    2100 2100
+P 2350 2300
+F 0 "#PWR07" H 2350 2150 50  0001 C CNN
+F 1 "+5V" H 2365 2473 50  0000 C CNN
+F 2 "" H 2350 2300 50  0001 C CNN
+F 3 "" H 2350 2300 50  0001 C CNN
+	1    2350 2300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -435,70 +435,70 @@ Connection ~ 4300 7650
 $Comp
 L power:+12V #PWR?
 U 1 1 5FA2D039
-P 1800 2100
+P 2050 2300
 AR Path="/5FA120CC/5FA2D039" Ref="#PWR?"  Part="1" 
 AR Path="/5FA2D039" Ref="#PWR03"  Part="1" 
-F 0 "#PWR03" H 1800 1950 50  0001 C CNN
-F 1 "+12V" H 1815 2273 50  0000 C CNN
-F 2 "" H 1800 2100 50  0001 C CNN
-F 3 "" H 1800 2100 50  0001 C CNN
-	1    1800 2100
+F 0 "#PWR03" H 2050 2150 50  0001 C CNN
+F 1 "+12V" H 2065 2473 50  0000 C CNN
+F 2 "" H 2050 2300 50  0001 C CNN
+F 3 "" H 2050 2300 50  0001 C CNN
+	1    2050 2300
 	1    0    0    -1  
 $EndComp
 Connection ~ 1850 7150
 Connection ~ 1850 7550
-Text Label 1300 3600 2    50   ~ 0
+Text Label 1550 3800 2    50   ~ 0
 SDI
-Text Label 1300 3300 2    50   ~ 0
+Text Label 1550 3500 2    50   ~ 0
 DAC1_SEL
-Text Label 1300 2500 2    50   ~ 0
+Text Label 1550 2700 2    50   ~ 0
 RX0
-Text Label 1300 3800 2    50   ~ 0
+Text Label 1550 4000 2    50   ~ 0
 SCK
 $Comp
 L power:GND #PWR05
 U 1 1 5F905314
-P 1900 4200
-F 0 "#PWR05" H 1900 3950 50  0001 C CNN
-F 1 "GND" H 1905 4027 50  0000 C CNN
-F 2 "" H 1900 4200 50  0001 C CNN
-F 3 "" H 1900 4200 50  0001 C CNN
-	1    1900 4200
+P 2150 4400
+F 0 "#PWR05" H 2150 4150 50  0001 C CNN
+F 1 "GND" H 2155 4227 50  0000 C CNN
+F 2 "" H 2150 4400 50  0001 C CNN
+F 3 "" H 2150 4400 50  0001 C CNN
+	1    2150 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1900 4200 1900 4100
+	2150 4400 2150 4300
 Wire Wire Line
-	1900 4200 2000 4200
+	2150 4400 2250 4400
 Wire Wire Line
-	2000 4200 2000 4100
-Connection ~ 1900 4200
+	2250 4400 2250 4300
+Connection ~ 2150 4400
 Wire Wire Line
 	5500 3150 6400 3150
-NoConn ~ 2000 2100
-NoConn ~ 1400 2600
-NoConn ~ 1400 3700
-NoConn ~ 2400 3800
-NoConn ~ 2400 3700
-NoConn ~ 2400 2900
-NoConn ~ 2400 2600
-NoConn ~ 2400 2500
+NoConn ~ 2250 2300
+NoConn ~ 1650 2800
+NoConn ~ 1650 3900
+NoConn ~ 2650 4000
+NoConn ~ 2650 3900
+NoConn ~ 2650 3100
+NoConn ~ 2650 2800
+NoConn ~ 2650 2700
 Wire Wire Line
-	1300 2500 1400 2500
+	1550 2700 1650 2700
 Wire Wire Line
-	1300 2700 1400 2700
+	1550 2900 1650 2900
 Wire Wire Line
-	1300 2800 1400 2800
+	1550 3000 1650 3000
 Wire Wire Line
-	1300 2900 1400 2900
+	1550 3100 1650 3100
 Wire Wire Line
-	1300 3300 1400 3300
+	1550 3500 1650 3500
 Wire Wire Line
-	1300 3400 1400 3400
+	1550 3600 1650 3600
 Wire Wire Line
-	1300 3600 1400 3600
+	1550 3800 1650 3800
 Wire Wire Line
-	1300 3800 1400 3800
+	1550 4000 1650 4000
 Connection ~ 3250 6150
 Wire Wire Line
 	3250 6150 3450 6150
@@ -539,9 +539,9 @@ Connection ~ 6900 1050
 Connection ~ 5750 2850
 Connection ~ 5850 3050
 Wire Wire Line
-	1300 3000 1400 3000
+	1550 3200 1650 3200
 Wire Wire Line
-	1300 3500 1400 3500
+	1550 3700 1650 3700
 Wire Wire Line
 	3000 5750 3000 6150
 Wire Wire Line
@@ -562,24 +562,23 @@ F 3 "~" H 2550 7550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 3200 2500 3200
+	2650 3400 2750 3400
 Wire Wire Line
-	2400 3100 2500 3100
+	2650 3300 2750 3300
 $Comp
 L MCU_Module:Arduino_Nano_v3.x A1
 U 1 1 5F8F32E1
-P 1900 3100
-F 0 "A1" H 2500 4200 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 2500 4100 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 1900 3100 50  0001 C CIN
-F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 1900 3100 50  0001 C CNN
-	1    1900 3100
+P 2150 3300
+F 0 "A1" H 2750 4400 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 2750 4300 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 2150 3300 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 2150 3300 50  0001 C CNN
+	1    2150 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 3300 2500 3300
-NoConn ~ 1400 3100
-NoConn ~ 1400 3200
+	2650 3500 2750 3500
+NoConn ~ 1650 3300
 $Comp
 L power:GND #PWR027
 U 1 1 5FA2465B
@@ -601,21 +600,21 @@ Text Label 2600 5650 2    50   ~ 0
 MIDI2
 Text Label 2600 5750 2    50   ~ 0
 MIDI4
-Text Label 2500 3100 0    50   ~ 0
+Text Label 2750 3300 0    50   ~ 0
 SW3
-Text Label 2500 3200 0    50   ~ 0
+Text Label 2750 3400 0    50   ~ 0
 SW1
-Text Label 1300 2900 2    50   ~ 0
+Text Label 1550 3100 2    50   ~ 0
 CLOCK_B
-Text Label 1300 3000 2    50   ~ 0
+Text Label 1550 3200 2    50   ~ 0
 CLOCK_4_B
-Text Label 1300 2800 2    50   ~ 0
+Text Label 1550 3000 2    50   ~ 0
 TRIGGER_B
-Text Label 1300 2700 2    50   ~ 0
+Text Label 1550 2900 2    50   ~ 0
 GATE_B
-Text Label 1300 3500 2    50   ~ 0
+Text Label 1550 3700 2    50   ~ 0
 MIDI_LED_A
-Text Label 1300 3400 2    50   ~ 0
+Text Label 1550 3600 2    50   ~ 0
 DAC2_SEL
 $Sheet
 S 6900 5500 1900 900 
@@ -925,16 +924,16 @@ Wire Wire Line
 Connection ~ 9000 2200
 Wire Wire Line
 	9000 2200 9300 2200
-NoConn ~ 2400 3600
-Text Label 2500 3300 0    50   ~ 0
+NoConn ~ 2650 3800
+Text Label 2750 3500 0    50   ~ 0
 BUT
 Wire Wire Line
-	2400 3400 2500 3400
-Text Label 2500 3400 0    50   ~ 0
+	2650 3600 2750 3600
+Text Label 2750 3600 0    50   ~ 0
 PROG_LED1
 Wire Wire Line
-	2400 3500 2500 3500
-Text Label 2500 3500 0    50   ~ 0
+	2650 3700 2750 3700
+Text Label 2750 3700 0    50   ~ 0
 PROG_LED2
 Wire Wire Line
 	1950 900  2050 900 
@@ -1012,7 +1011,7 @@ F 3 "" H 3800 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 4650 5750 0    70   ~ 0
-RX0
+RX_J
 Wire Wire Line
 	3450 5850 3500 5850
 Wire Wire Line
@@ -1282,4 +1281,29 @@ F 3 "~" H 4050 5350 50  0001 C CNN
 $EndComp
 Text Notes 4100 6200 0    50   ~ 0
 6N137 (different pinout)\ncould also be used
+Text Label 1100 2300 0    70   ~ 0
+RX_J
+Wire Wire Line
+	1550 2200 1550 2700
+Wire Wire Line
+	1100 2650 1100 3400
+Wire Wire Line
+	1100 3400 1650 3400
+$Comp
+L Connector_Generic:Conn_01x03 J17
+U 1 1 5FF4EA97
+P 900 2300
+F 0 "J17" H 818 2617 50  0000 C CNN
+F 1 "Conn_01x03" H 818 2526 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 900 2300 50  0001 C CNN
+F 3 "~" H 900 2300 50  0001 C CNN
+	1    900  2300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 2200 1550 2200
+Wire Wire Line
+	1100 2400 1100 2650
+Text Label 1550 3400 2    50   ~ 0
+SOFT_RX
 $EndSCHEMATC
