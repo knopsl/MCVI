@@ -4,20 +4,21 @@ This project is adapted from https://github.com/elkayem/midi2cv via https://gith
 
 To date the changes have been:
 
-* Convert the schematic to a KiCad project, revising it to use KiCad symbols 
-* Convert to Kosmo (or Eurorack) format by including a 10 pin ±12V power connector
-* Some component changes, notably a TL074 with split supply in place of the single supply LM324N.
+* Converted the schematic to a KiCad project, revising it to use KiCad symbols 
+* Converted to Kosmo (or Eurorack) format by including a 10 pin ±12V power connector
+* Some component changes, notably a TL074 with split supply in place of the single supply LM324N, and optoisolator changed to H11L1.
 * Added blinky LEDs on gate, trigger, clock, and one to be blinked when there is MIDI activity.
-* Added connections for an OLED display. (Probably won't be used for initial version).
-* Replaced priority header/toggle with three push buttons for more general configuration changes. (Probably won't be used for initial version).
+* Added push button and bicolor LED for tuning.
 * Added CLOCK/4 output; CLOCK will become 4 per quarter note.
-* Added dummy 0R and 10M resistors to non NOTE CV outputs. This is to create PCB pads which could be used in a later multi-voice capable version.
+* Buffered digital outputs.
+* PCB layout for Kosmo format.
 
 Possible further changes:
 
-* Make all CV outputs 0-10V, with feedback capacitor, similar to Befaco MIDI Thing; 300R output resistor in-loop
-* Convert from Arduino Nano to Teensy 4.0 in anticipation of USB MIDI capable version
+* Make all CV outputs 0-10V, with feedback capacitor, similar to Befaco MIDI Thing; 300R output resistor in-loop.
+* Convert from Arduino Nano to Teensy 4.0 in anticipation of USB MIDI capable version.
 * Use MCP4922 instead of MCP4822, with 5V reference
+* Replace controls with e.g. 2 push buttons and an OLED display, for more general configuration changes, possibly including reassignment of all output jacks (e.g. 4 channels note and velocity).
 
 **This is very much a work in progress; assume nothing has been tested and nothing works!**
 
