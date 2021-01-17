@@ -9,7 +9,7 @@ Date "2020-10-20"
 Rev ""
 Comp "Rich Holmes / Analog Output"
 Comment1 "via https://github.com/philippejadin/midi2cv"
-Comment2 "Forked from https://github.com/elkayem/midi2cv"
+Comment2 "Adapted from https://github.com/elkayem/midi2cv"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -571,7 +571,7 @@ U 1 1 5F8F32E1
 P 2150 3300
 F 0 "A1" H 2750 4400 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 2750 4300 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 2150 3300 50  0001 C CIN
+F 2 "ao_tht:Arduino_Nano" H 2150 3300 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 2150 3300 50  0001 C CNN
 	1    2150 3300
 	1    0    0    -1  
@@ -1286,8 +1286,6 @@ RX_J
 Wire Wire Line
 	1550 2200 1550 2700
 Wire Wire Line
-	1100 2650 1100 3400
-Wire Wire Line
 	1100 3400 1650 3400
 $Comp
 L Connector_Generic:Conn_01x03 J17
@@ -1302,8 +1300,8 @@ F 3 "~" H 900 2300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1100 2200 1550 2200
-Wire Wire Line
-	1100 2400 1100 2650
 Text Label 1550 3400 2    50   ~ 0
 SOFT_RX
+Wire Wire Line
+	1100 2400 1100 3400
 $EndSCHEMATC

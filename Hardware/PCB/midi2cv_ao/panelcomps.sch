@@ -9,7 +9,7 @@ Date "2020-10-20"
 Rev ""
 Comp "Rich Holmes / Analog Output"
 Comment1 "via https://github.com/philippejadin/midi2cv"
-Comment2 "Forked from https://github.com/elkayem/midi2cv"
+Comment2 "Adapted from https://github.com/elkayem/midi2cv"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -128,7 +128,7 @@ Wire Wire Line
 Wire Wire Line
 	2050 4600 1450 4600
 Wire Wire Line
-	2200 4300 1750 4300
+	2200 4300 1900 4300
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5F973149
@@ -188,7 +188,7 @@ AR Path="/5F9C6D0A" Ref="J?"  Part="1"
 AR Path="/5F990527/5F9C6D0A" Ref="J6"  Part="1" 
 F 0 "J6" H 2400 4500 50  0000 L CNN
 F 1 "Conn_01x03" H 2200 4400 50  0000 L CNN
-F 2 "Connector_Wire:SolderWire-0.1sqmm_1x03_P3.6mm_D0.4mm_OD1mm" H 2400 4200 50  0001 C CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 2400 4200 50  0001 C CNN
 F 3 "~" H 2400 4200 50  0001 C CNN
 	1    2400 4200
 	1    0    0    1   
@@ -601,7 +601,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 3050 5200 3050
 Wire Wire Line
-	1700 2900 2500 2900
+	1700 2900 2300 2900
 Wire Wire Line
 	1700 2900 1700 2700
 Wire Wire Line
@@ -659,7 +659,7 @@ U 1 1 5FAD8C7C
 P 1800 1550
 F 0 "SW1" H 1800 1835 50  0000 C CNN
 F 1 "SW_Push" H 1800 1744 50  0000 C CNN
-F 2 "ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" H 1800 1750 50  0001 C CNN
+F 2 "ao_tht:Push_button_A-5050" H 1800 1750 50  0001 C CNN
 F 3 "~" H 1800 1750 50  0001 C CNN
 	1    1800 1550
 	1    0    0    -1  
@@ -685,7 +685,7 @@ U 1 1 5FABBD2B
 P 1800 2000
 F 0 "D4" H 1800 1653 50  0000 C CNN
 F 1 "LED_Dual_ACA" H 1800 1744 50  0000 C CNN
-F 2 "ao_tht:TO-92_Inline_Wide" H 1800 2000 50  0001 C CNN
+F 2 "ao_tht:LED_D5.0mm-3" H 1800 2000 50  0001 C CNN
 F 3 "~" H 1800 2000 50  0001 C CNN
 	1    1800 2000
 	1    0    0    1   
@@ -730,4 +730,32 @@ Wire Wire Line
 Wire Wire Line
 	5100 3650 5100 5850
 Connection ~ 6850 5850
+$Comp
+L power:GND2 #PWR0101
+U 1 1 5FF2CCF6
+P 2300 2900
+F 0 "#PWR0101" H 2300 2650 50  0001 C CNN
+F 1 "GND2" H 2305 2727 50  0000 C CNN
+F 2 "" H 2300 2900 50  0001 C CNN
+F 3 "" H 2300 2900 50  0001 C CNN
+	1    2300 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 2900
+Wire Wire Line
+	2300 2900 2500 2900
+$Comp
+L power:GND2 #PWR0102
+U 1 1 5FF2D19C
+P 1900 4300
+F 0 "#PWR0102" H 1900 4050 50  0001 C CNN
+F 1 "GND2" H 1905 4127 50  0000 C CNN
+F 2 "" H 1900 4300 50  0001 C CNN
+F 3 "" H 1900 4300 50  0001 C CNN
+	1    1900 4300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1900 4300
+Wire Wire Line
+	1900 4300 1750 4300
 $EndSCHEMATC
