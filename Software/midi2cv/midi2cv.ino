@@ -14,16 +14,11 @@
 */
 
 /*
-  Some additons by Philippe Jadin
-  - use of software serial in order to keep it connected to computer while doing midi & program upload at the same time
-  -> connect midi RX to pin 10 (D7) (instead of pin 2 :  RX)
+  Version by Rich Holmes:
+  Some reformatting
 
-  - Add some comments
-
+  License: GPL3 as above.
 */
-
-#define DBG 1  // Nonzero for diagnostics (must use software serial)
-#define HSERIAL 1  // 1 for hardware serial, 0 for software
 
 #include <MIDI.h>
 #include <SPI.h>
@@ -45,23 +40,10 @@
 // Use software serial if diagnostics to serial console are needed
 // otherwise hardware is preferred
 
-#if HSERIAL==1
 MIDI_CREATE_DEFAULT_INSTANCE();
-#else
-#include <SoftwareSerial.h>
-#define MIDI_RX 6 // <--- For SoftwareSerial connect the optocoupler to this pin
-#define MIDI_TX 7
-
-SoftwareSerial midiSerial(MIDI_RX, MIDI_TX);
-MIDI_CREATE_INSTANCE(SoftwareSerial, midiSerial, MIDI);
-#endif
 
 void setup()
 {
-#if DBG!=0
-  Serial.begin(9600);
-#endif
-
   pinMode(NP_SEL1, INPUT_PULLUP);
   pinMode(NP_SEL2, INPUT_PULLUP);
 
@@ -91,16 +73,6 @@ unsigned long trigTimer = 0;
 
 void loop()
 {
-  /*
-    for (int i = 1; i < 80; i++)
-    {
-    commandNote (i);
-    delay (2000);
-    }
-  */
-
-
-
   int type, noteMsg, velocity, channel, d1, d2;
   static unsigned long clock_timer = 0, clock_timeout = 0;
   static unsigned int clock_count = 0;
@@ -141,8 +113,8 @@ void loop()
 	  else
 	    {
 	      notes[noteMsg] = true;
-	      // velocity range from 0 to 4095 mV  Left shift d2 by 5 to scale from 0 to 4095,
-	      // and choose gain = 2X
+	      // velocity range from 0 to 4095 mV. Left shift d2 by 5
+	      // to scale from 0 to 4095, and choose gain = 2X
 	      setVoltage(DAC1, 1, 1, velocity << 5); // DAC1, channel 1, gain = 2X
 	    }
 
@@ -158,7 +130,9 @@ void loop()
 	    {
 	      // Last note priority
 	      if (notes[noteMsg])
-		{  // If note is on and using last note priority, add to ordered list
+		{
+		  // If note is on and using last note priority, add
+		  // to ordered list
 		  orderIndx = (orderIndx + 1) % 20;
 		  noteOrder[orderIndx] = noteMsg;
 		}
@@ -170,8 +144,9 @@ void loop()
 	  d1 = MIDI.getData1();
 	  d2 = MIDI.getData2(); // d2 from 0 to 127, mid point = 64
 
-	  // Pitch bend output from 0 to 1023 mV.  Left shift d2 by 4 to scale from 0 to 2047.
-	  // With DAC gain = 1X, this will yield a range from 0 to 1023 mV.
+	  // Pitch bend output from 0 to 1023 mV.  Left shift d2 by 4
+	  // to scale from 0 to 2047.  With DAC gain = 1X, this will
+	  // yield a range from 0 to 1023 mV.
 	  setVoltage(DAC2, 0, 0, d2 << 4); // DAC2, channel 0, gain = 1X
 	  break;
 
@@ -179,8 +154,8 @@ void loop()
 	  d1 = MIDI.getData1();
 	  d2 = MIDI.getData2(); // From 0 to 127
 
-	  // CC range from 0 to 4095 mV  Left shift d2 by 5 to scale from 0 to 4095,
-	  // and choose gain = 2X
+	  // CC range from 0 to 4095 mV Left shift d2 by 5 to scale
+	  // from 0 to 4095, and choose gain = 2X
 	  setVoltage(DAC2, 1, 1, d2 << 5); // DAC2, channel 1, gain = 2X
 	  break;
 
@@ -194,7 +169,9 @@ void loop()
 	    }
 	  clock_count++;
 	  if (clock_count == 24)
-	    {  // MIDI timing clock sends 24 pulses per quarter note.  Sent pulse only once every 24 pulses
+	    {
+	      // MIDI timing clock sends 24 pulses per quarter note.
+	      // Sent pulse only once every 24 pulses
 	      clock_count = 0;
 	    }
 	  break;
@@ -269,8 +246,10 @@ void commandLastNote()
 // Rescale 88 notes to 4096 mV:
 //    noteMsg = 0 -> 0 mV
 //    noteMsg = 87 -> 4096 mV
-// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV per octive
-// Note that DAC output will need to be amplified by 1.77X for the standard 1V/octave
+
+// DAC output will be (4095/87) = 47.069 mV per note, and 564.9655 mV
+// per octave. Note that DAC output will need to be amplified by 1.77X
+// for the standard 1V/octave.
 
 #define NOTE_SF 47.069f // This value can be tuned if CV output isn't exactly 1V/octave
 
@@ -285,11 +264,18 @@ void commandNote(int noteMsg)
 }
 
 // setVoltage -- Set DAC voltage output
-// dacpin: chip select pin for DAC.  Note and velocity on DAC1, pitch bend and CC on DAC2
+
+// dacpin: chip select pin for DAC.  Note and velocity on DAC1, pitch
+// bend and CC on DAC2
+//
 // channel: 0 (A) or 1 (B).  Note and pitch bend on 0, velocity and CC on 2.
+//
 // gain: 0 = 1X, 1 = 2X.
-// mV: integer 0 to 4095.  If gain is 1X, mV is in units of half mV (i.e., 0 to 2048 mV).
-// If gain is 2X, mV is in units of mV
+//
+// mV: integer 0 to 4095.  If gain is 1X, mV is in units of half mV
+// (i.e., 0 to 2048 mV).
+//
+// If gain is 2X, mV is in units of mV.
 
 void setVoltage(int dacpin, bool channel, bool gain, unsigned int mV)
 {

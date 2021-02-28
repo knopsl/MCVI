@@ -1,4 +1,3 @@
 (fp_lib_table
   (lib (name ao_tht)(type KiCad)(uri ${KIPRJMOD}/ao_tht.pretty)(options "")(descr ""))
-  (lib (name midi2cv_ao)(type KiCad)(uri ${KIPRJMOD}/midi2cv_ao.pretty)(options "")(descr ""))
 )

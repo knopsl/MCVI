@@ -1,39 +1,22 @@
-# midi2cv
+# MCVI
 
-This project is adapted from https://github.com/elkayem/midi2cv via https://github.com/philippejadin/midi2cv . 
+This project is adapted from [https://github.com/elkayem/midi2cv](https://github.com/elkayem/midi2cv). 
 
 To date the changes have been:
 
 * Converted the schematic to a KiCad project, revising it to use KiCad symbols 
 * Converted to Kosmo (or Eurorack) format by including a 10 pin ±12V power connector
-* Some component changes, notably a TL074 with split supply in place of the single supply LM324N, and optoisolator changed to H11L1.
+* Some component changes, notably a TL074 with split supply in place of the single supply LM324N, and optoisolator changed to 6N137.
 * Added blinky LEDs on gate, trigger, clock, and one to be blinked when there is MIDI activity.
 * Added push button and bicolor LED for tuning.
 * Added CLOCK/4 output; CLOCK will become 4 per quarter note.
 * Buffered digital outputs.
 * PCB layout for Kosmo format.
-* Option to use either hard or soft serial.
-
-Possible further changes — maybe save all these for a future enhanced version:
-
-* Make pitch output range offset variable in hardware or software. That is, allow MIDI 60 to give 0, 1, 2, 3, or 4 volts.
-* Make all CV outputs the same range, with feedback capacitor, similar to Befaco MIDI Thing; 300R output resistor in-loop.
-* Convert from Arduino Nano to Teensy 4.0 in anticipation of USB MIDI capable version.
-* Use MCP4922 instead of MCP4822, with 5V reference
-* Replace controls with e.g. 2 push buttons and an OLED display, for more general configuration changes, possibly including reassignment of all output jacks (e.g. 4 channels note and velocity).
-
-### A few more words about output voltage range
-
-As discussed at [https://learningmodular.com/matching-octaves-in-your-modular/](https://learningmodular.com/matching-octaves-in-your-modular/), different MIDI/CV converters in their default configuration give different outputs for MIDI note 60, and different synth oscillators with controls "centered" expect different voltages to produce middle C. It's a mess. 
-
-Oscillator voltages for middle C vary from 0 V to 4 V. Therefore the piano keyboard range (A0 to C8) can be as low as -3.25 V to +4.0 V or as high as +0.75 V to +8.0 V. In McGovern's design the 0 V to +4.096 V range of the MCP4822 gets mapped in hardware to an output range 0 V to +7.25 V, with MIDI 60 corresponding (I think) to +4.25 V. An adjustable offset of -0.25 V to -4.25 V could be done in hardware. Alternatively, though with some loss of pitch resolution, the MCP4822 range could be mapped in hardware to e.g. -3.25 V to +8.0 V and the code could take care of the variable offset. (As is, 1 bit corresponds to 7.25 V / 4096 * 1200 = 2.12 cents. With the wider output range it would be (8-(-3.25))/4096 * 1200 = 3.3 cents. As is, the output stage gain is 7.25 octaves / 4.096 V = 1.77. For the wider range the gain would be 11.25 octaves / 4.096 V = 2.747, achievable using 10k and 7.5k for R3 and R8.)
-
-Either way, to offset the voltage we would need a voltage reference, and if there's a voltage reference maybe we might as well have it be 5 V and use an MCP4922?
 
 **This is very much a work in progress; assume nothing has been tested and nothing works!**
 
-<img src="./Images/midi2cv_ao.jpg" alt="schematic" width="800">
-<img src="./Images/midi2cv_ao2.jpg" alt="schematic" width="800">
+<img src="./Images/MCVI.jpg" alt="schematic" width="800">
+<img src="./Images/MCVI2.jpg" alt="schematic" width="800">
 
 
 Following is quoted from the project from which this is forked:
