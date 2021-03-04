@@ -8,10 +8,12 @@ To date the changes have been:
 * Converted to Kosmo (or Eurorack) format by including a 10 pin ±12V power connector
 * Some component changes, notably a TL074 with split supply in place of the single supply LM324N, and optoisolator changed to 6N137.
 * Added blinky LEDs on gate, trigger, clock, and one to be blinked when there is MIDI activity.
-* Added push button and bicolor LED for tuning.
+* Added push button and bicolor LED for configuration.
 * Added CLOCK/4 output; CLOCK will become 4 per quarter note.
 * Buffered digital outputs.
 * PCB layout for Kosmo format.
+
+I have put a push button and LED in the schematic to be used for configuration... but am not sure how it would be used and may remove it. Could be for tuning but this probably would not be used often enough to justify it. Channel selection, but that needs more feedback than 1 LED (unless restricted to 4 channels, then use off, red, yellow, green — not that satisfactory.) 
 
 **This is very much a work in progress; assume nothing has been tested and nothing works!**
 

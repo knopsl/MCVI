@@ -353,9 +353,7 @@ Wire Wire Line
 	2050 1400 2050 1500
 Wire Wire Line
 	1950 1400 2050 1400
-Text Label 2050 1000 0    50   ~ 0
-SW1
-Text Label 2050 900  0    50   ~ 0
+Text Label 2050 1200 0    50   ~ 0
 SW3
 $Comp
 L Connector_Generic:Conn_01x06 J3
@@ -387,12 +385,10 @@ Wire Wire Line
 	1950 1000 2050 1000
 Wire Wire Line
 	1950 1100 2050 1100
-Text Label 2050 1200 0    50   ~ 0
-PROG_LED1
+Text Label 2050 1000 0    50   ~ 0
+PROG_LED3
 Text Label 2050 1100 0    50   ~ 0
-BUT
-Text Label 2050 1300 0    50   ~ 0
-PROG_LED2
+PROG_LED1
 $Comp
 L power:GND #PWR?
 U 1 1 5FF05EAC
@@ -1244,4 +1240,10 @@ U 5F990527
 F0 "Panel components" 50
 F1 "panelcomps.sch" 50
 $EndSheet
+Text Notes 2550 1050 0    50   ~ 0
+Probably just make this a \n3 pin connector, no BUT,\nSW1, SW3
+Text Label 2050 900  0    50   ~ 0
+BUT
+Text Label 2050 1300 0    50   ~ 0
+SW1
 $EndSCHEMATC
