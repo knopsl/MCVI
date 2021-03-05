@@ -15,7 +15,10 @@
 
 /*
   Version by Rich Holmes:
-  Some reformatting
+  * Some reformatting and reordering
+  * Add 4 per quarter note clock
+  * Ignore pitch bend and CC if not channel 1
+  * Ignore CC if not mod wheel
 
   License: GPL3 as above.
 */
@@ -33,7 +36,8 @@
 
 #define GATE  2
 #define TRIG  3
-#define CLOCK 4
+#define CLOCK_1PQ 4
+#define CLOCK_4PQ 5
 #define DAC1  8
 #define DAC2  9
 
@@ -49,12 +53,14 @@ void setup()
 
   pinMode(GATE, OUTPUT);
   pinMode(TRIG, OUTPUT);
-  pinMode(CLOCK, OUTPUT);
+  pinMode(CLOCK_1PQ, OUTPUT);
+  pinMode(CLOCK_4PQ, OUTPUT);
   pinMode(DAC1, OUTPUT);
   pinMode(DAC2, OUTPUT);
   digitalWrite(GATE, LOW);
   digitalWrite(TRIG, LOW);
-  digitalWrite(CLOCK, LOW);
+  digitalWrite(CLOCK_1PQ, LOW);
+  digitalWrite(CLOCK_4PQ, LOW);
   digitalWrite(DAC1, HIGH);
   digitalWrite(DAC2, HIGH);
 
@@ -95,6 +101,30 @@ void loop()
       byte type = MIDI.getType();
       switch (type)
 	{
+	case midi::ActiveSensing:
+	  break;
+
+	case midi::Clock:
+	  if (millis() > clock_timeout + 300) clock_count = 0; // Prevents Clock from starting in between quarter notes after clock is restarted!
+	  clock_timeout = millis();
+
+	  // MIDI timing clock sends 24 pulses per quarter note.
+	  // Sent CLOCK_1PQ pulse only once every 24 pulses
+	  // Sent CLOCK_4PQ pulse only once every 6 pulses
+	  
+	  if (clock_count == 0)
+	    digitalWrite(CLOCK_1PQ, HIGH); // Start CLOCK_1PQ pulse
+	  if (clock_count == 0 || clock_count == 6
+	      || clock_count == 12 || clock_count == 18)
+	    {
+	      digitalWrite(CLOCK_4PQ, HIGH); // Start CLOCK_4PQ pulse
+	      clock_timer = millis();
+	    }
+	  clock_count++;
+	  if (clock_count == 24)
+	    clock_count = 0;
+	  break;
+
 	case midi::NoteOn:
 	case midi::NoteOff:
 	  noteMsg = MIDI.getData1() - 21; // A0 = 21, Top Note = 108
@@ -141,47 +171,34 @@ void loop()
 	  break;
 
 	case midi::PitchBend:
-	  d1 = MIDI.getData1();
-	  d2 = MIDI.getData2(); // d2 from 0 to 127, mid point = 64
+	  channel = MIDI.getChannel();
+	  if (channel != 1) // Chan 1 only
+	    break;
 
 	  // Pitch bend output from 0 to 1023 mV.  Left shift d2 by 4
 	  // to scale from 0 to 2047.  With DAC gain = 1X, this will
 	  // yield a range from 0 to 1023 mV.
+	  d2 = MIDI.getData2(); // d2 from 0 to 127, mid point = 64
 	  setVoltage(DAC2, 0, 0, d2 << 4); // DAC2, channel 0, gain = 1X
 	  break;
 
 	case midi::ControlChange:
-	  d1 = MIDI.getData1();
-	  d2 = MIDI.getData2(); // From 0 to 127
+	  channel = MIDI.getChannel();
+	  if (channel != 1) // Chan 1 only
+	    break;
 
+	  d1 = MIDI.getData1();
+	  if (d1 != 1) // CC 1 (mod wheel) only
+	    break;
+	  
 	  // CC range from 0 to 4095 mV Left shift d2 by 5 to scale
 	  // from 0 to 4095, and choose gain = 2X
+	  d2 = MIDI.getData2(); // From 0 to 127
 	  setVoltage(DAC2, 1, 1, d2 << 5); // DAC2, channel 1, gain = 2X
 	  break;
 
-	case midi::Clock:
-	  if (millis() > clock_timeout + 300) clock_count = 0; // Prevents Clock from starting in between quarter notes after clock is restarted!
-	  clock_timeout = millis();
-	  if (clock_count == 0)
-	    {
-	      digitalWrite(CLOCK, HIGH); // Start clock pulse
-	      clock_timer = millis();
-	    }
-	  clock_count++;
-	  if (clock_count == 24)
-	    {
-	      // MIDI timing clock sends 24 pulses per quarter note.
-	      // Sent pulse only once every 24 pulses
-	      clock_count = 0;
-	    }
-	  break;
-
-	case midi::ActiveSensing:
-	  break;
-
 	default:
-	  d1 = MIDI.getData1();
-	  d2 = MIDI.getData2();
+	  break;
 	}
     }
 }
@@ -233,7 +250,7 @@ void commandLastNote()
 
   for (int i = 0; i < 20; i++)
     {
-      noteIndx = noteOrder[ mod(orderIndx - i, 20) ];
+      noteIndx = noteOrder[mod(orderIndx - i, 20)];
       if (notes[noteIndx])
 	{
 	  commandNote(noteIndx);
