@@ -655,7 +655,7 @@ NoConn ~ 3250 5800
 Wire Wire Line
 	3300 5700 3250 5700
 Text Notes 4025 5475 0    50   ~ 0
-Pullup is 350R–4k in datasheet\ntests (with +5V), 1k to 10k in\nMIDI diagrams online 
+Pullup is 350R to 4k in datasheet\ntests (with +5V), 1k to 10k in\nMIDI diagrams online 
 $Comp
 L power:+5V #PWR019
 U 1 1 5FF25923
@@ -1241,7 +1241,7 @@ F0 "Panel components" 50
 F1 "panelcomps.sch" 50
 $EndSheet
 Text Notes 2550 1050 0    50   ~ 0
-Probably just make this a \n3 pin connector, no BUT,\nSW1, SW3
+Probably just make this a \n3 pin connector. No BUT,\nPROG_LED1, PROG_LED3
 Text Label 2050 900  0    50   ~ 0
 BUT
 Text Label 2050 1300 0    50   ~ 0
