@@ -17,7 +17,7 @@
   Version by Rich Holmes:
   * Some reformatting and reordering
   * Add 4 per quarter note clock
-  * Ignore pitch bend and CC if not channel 1
+  * Listen only to selected channel
   * Ignore CC if not mod wheel
 
   License: GPL3 as above.
@@ -40,6 +40,8 @@
 #define CLOCK_4PQ 5
 #define DAC1  8
 #define DAC2  9
+
+#define CHANNEL 1  // Use only this channel
 
 // Use software serial if diagnostics to serial console are needed
 // otherwise hardware is preferred
@@ -66,7 +68,7 @@ void setup()
 
   SPI.begin();
 
-  MIDI.begin(MIDI_CHANNEL_OMNI);
+  MIDI.begin(CHANNEL);
 
   // Set initial pitch bend voltage to 0.5V (mid point).  With Gain = 1X, this is 1023
   // Other DAC outputs will come up as 0V, so don't need to be initialized
@@ -79,7 +81,7 @@ unsigned long trigTimer = 0;
 
 void loop()
 {
-  int type, noteMsg, velocity, channel, d1, d2;
+  int type, noteMsg, velocity, d1, d2;
   static unsigned long clock_timer = 0, clock_timeout = 0;
   static unsigned int clock_count = 0;
   bool S1, S2;
@@ -128,7 +130,6 @@ void loop()
 	case midi::NoteOn:
 	case midi::NoteOff:
 	  noteMsg = MIDI.getData1() - 21; // A0 = 21, Top Note = 108
-	  channel = MIDI.getChannel();
 
 	  if ((noteMsg < 0) || (noteMsg > 87)) 
 	    break; // Only 88 notes of keyboard are supported
@@ -171,10 +172,6 @@ void loop()
 	  break;
 
 	case midi::PitchBend:
-	  channel = MIDI.getChannel();
-	  if (channel != 1) // Chan 1 only
-	    break;
-
 	  // Pitch bend output from 0 to 1023 mV.  Left shift d2 by 4
 	  // to scale from 0 to 2047.  With DAC gain = 1X, this will
 	  // yield a range from 0 to 1023 mV.
@@ -183,10 +180,6 @@ void loop()
 	  break;
 
 	case midi::ControlChange:
-	  channel = MIDI.getChannel();
-	  if (channel != 1) // Chan 1 only
-	    break;
-
 	  d1 = MIDI.getData1();
 	  if (d1 != 1) // CC 1 (mod wheel) only
 	    break;
