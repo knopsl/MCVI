@@ -40,11 +40,9 @@
 #define CLOCK_4PQ 5
 #define DAC1  8
 #define DAC2  9
+#define MIDILED 10
 
 #define CHANNEL 1  // Use only this channel
-
-// Use software serial if diagnostics to serial console are needed
-// otherwise hardware is preferred
 
 MIDI_CREATE_DEFAULT_INSTANCE();
 
@@ -59,16 +57,19 @@ void setup()
   pinMode(CLOCK_4PQ, OUTPUT);
   pinMode(DAC1, OUTPUT);
   pinMode(DAC2, OUTPUT);
+  pinMode(MIDILED, OUTPUT);
   digitalWrite(GATE, LOW);
   digitalWrite(TRIG, LOW);
   digitalWrite(CLOCK_1PQ, LOW);
   digitalWrite(CLOCK_4PQ, LOW);
   digitalWrite(DAC1, HIGH);
   digitalWrite(DAC2, HIGH);
+  digitalWrite(MIDILED, LOW);
 
   SPI.begin();
 
   MIDI.begin(CHANNEL);
+
 
   // Set initial pitch bend voltage to 0.5V (mid point).  With Gain = 1X, this is 1023
   // Other DAC outputs will come up as 0V, so don't need to be initialized
@@ -84,8 +85,15 @@ void loop()
   int type, noteMsg, velocity, d1, d2;
   static unsigned long clock_timer = 0, clock_timeout = 0;
   static unsigned int clock_count = 0;
+  static unsigned long midiled_timer = 0;
   bool S1, S2;
 
+  if ((midiled_timer > 0) && (millis() - midiled_timer > 20))
+    {
+      digitalWrite(MIDILED, LOW); // Set MIDI LED low after 20 msec
+      midiled_timer = 0;
+    }
+    
   if ((trigTimer > 0) && (millis() - trigTimer > 20))
     {
       digitalWrite(TRIG, LOW); // Set trigger low after 20 msec
@@ -94,12 +102,15 @@ void loop()
 
   if ((clock_timer > 0) && (millis() - clock_timer > 20))
     {
-      digitalWrite(CLOCK, LOW); // Set clock pulse low after 20 msec
+      digitalWrite(CLOCK_1PQ, LOW); // Set clock pulse low after 20 msec
+      digitalWrite(CLOCK_4PQ, LOW); // Set clock pulse low after 20 msec
       clock_timer = 0;
     }
 
   if (MIDI.read())
     {
+      digitalWrite(MIDILED, HIGH);
+      midiled_timer = millis();
       byte type = MIDI.getType();
       switch (type)
 	{
