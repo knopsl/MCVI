@@ -1409,4 +1409,12 @@ Wire Wire Line
 	9375 6500 9275 6500
 Wire Wire Line
 	9375 6600 9275 6600
+Text Label 5575 925  2    50   ~ 0
+NOTE_B
+Text Label 5575 2375 2    50   ~ 0
+VELOCITY_B
+Text Label 5575 3500 2    50   ~ 0
+PITCH_BEND_B
+Text Label 5575 4400 2    50   ~ 0
+CONTROL_B
 $EndSCHEMATC
