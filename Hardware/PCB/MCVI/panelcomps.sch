@@ -102,10 +102,6 @@ F 3 "~" H 8450 5200 50  0001 C CNN
 	1    8450 5200
 	-1   0    0    1   
 $EndComp
-NoConn ~ 2000 5300
-NoConn ~ 1400 5300
-Wire Wire Line
-	2200 5500 2450 5500
 $Comp
 L Connector:AudioJack2 J?
 U 1 1 5F973149
@@ -150,26 +146,13 @@ $EndComp
 Text Label 8000 3150 2    70   ~ 0
 VELOCITY
 Text Label 8000 3900 2    70   ~ 0
-CLOCK_4
+CLOCK_4PQ
 Text Label 8000 5200 2    70   ~ 0
 TRIGGER
 Wire Wire Line
 	4450 3850 4450 3750
 Wire Wire Line
 	4450 3750 4350 3750
-$Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 5F9C6D0A
-P 2650 5400
-AR Path="/5F9C6D0A" Ref="J?"  Part="1" 
-AR Path="/5F990527/5F9C6D0A" Ref="J7"  Part="1" 
-F 0 "J7" H 2600 5650 50  0000 L CNN
-F 1 "2 pin Molex connector" H 2225 5550 50  0000 L CNN
-F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 2650 5400 50  0001 C CNN
-F 3 "~" H 2650 5400 50  0001 C CNN
-	1    2650 5400
-	1    0    0    -1  
-$EndComp
 Wire Notes Line
 	3350 700  3350 7550
 Text Notes 650  1150 0    100  ~ 0
@@ -309,7 +292,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 4850 8200 4650
 Text Label 8000 4550 2    70   ~ 0
-CLOCK
+CLOCK_1PQ
 Wire Wire Line
 	5300 3250 5300 3550
 Wire Wire Line
@@ -578,35 +561,35 @@ Wire Wire Line
 Wire Wire Line
 	4350 3050 5200 3050
 Wire Wire Line
-	1325 3700 1925 3700
+	1050 3675 1650 3675
 Wire Wire Line
-	1825 3600 2125 3600
+	1550 3575 2175 3575
 Wire Wire Line
-	1875 3500 2125 3500
+	1600 3475 2175 3475
 $Comp
 L Switch:SW_SPDT SW?
 U 1 1 5F9D6D35
-P 1525 3350
+P 1250 3325
 AR Path="/5F9D6D35" Ref="SW?"  Part="1" 
 AR Path="/5F990527/5F9D6D35" Ref="SW1"  Part="1" 
-F 0 "SW1" H 1325 3150 50  0000 C CNN
-F 1 "SW_SPDT" H 1325 3250 50  0000 C CNN
-F 2 "ao_tht:SPDT-toggle-switch-1M-series" H 1525 3350 50  0001 C CNN
-F 3 "~" H 1525 3350 50  0001 C CNN
-	1    1525 3350
+F 0 "SW1" H 1050 3125 50  0000 C CNN
+F 1 "SW_SPDT" H 1050 3225 50  0000 C CNN
+F 2 "ao_tht:SPDT-toggle-switch-1M-series" H 1250 3325 50  0001 C CNN
+F 3 "~" H 1250 3325 50  0001 C CNN
+	1    1250 3325
 	1    0    0    1   
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x03 J?
 U 1 1 5FAAC32F
-P 2325 3600
+P 2375 3575
 AR Path="/5FAAC32F" Ref="J?"  Part="1" 
 AR Path="/5F990527/5FAAC32F" Ref="J6"  Part="1" 
-F 0 "J6" H 2325 3275 50  0000 C CNN
-F 1 "3 pin Molex connector" H 2325 3375 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 2325 3600 50  0001 C CNN
-F 3 "~" H 2325 3600 50  0001 C CNN
-	1    2325 3600
+F 0 "J6" H 2375 3250 50  0000 C CNN
+F 1 "3 pin Molex connector" H 2375 3325 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 2375 3575 50  0001 C CNN
+F 3 "~" H 2375 3575 50  0001 C CNN
+	1    2375 3575
 	1    0    0    1   
 $EndComp
 Wire Wire Line
@@ -648,49 +631,84 @@ Connection ~ 6850 5850
 $Comp
 L power:GND2 #PWR032
 U 1 1 5FF2CCF6
-P 1925 3700
-F 0 "#PWR032" H 1925 3450 50  0001 C CNN
-F 1 "GND2" H 1930 3527 50  0000 C CNN
-F 2 "" H 1925 3700 50  0001 C CNN
-F 3 "" H 1925 3700 50  0001 C CNN
-	1    1925 3700
+P 1650 3675
+F 0 "#PWR032" H 1650 3425 50  0001 C CNN
+F 1 "GND2" H 1655 3502 50  0000 C CNN
+F 2 "" H 1650 3675 50  0001 C CNN
+F 3 "" H 1650 3675 50  0001 C CNN
+	1    1650 3675
 	1    0    0    -1  
 $EndComp
-Connection ~ 1925 3700
+Connection ~ 1650 3675
 Wire Wire Line
-	1400 5400 1400 5675
+	1750 5675 950  5675
 Wire Wire Line
-	2200 5675 1400 5675
+	1750 5500 1750 5675
 Wire Wire Line
-	2000 5400 2450 5400
+	1650 3675 2175 3675
+Wire Wire Line
+	1050 3325 1050 3675
+Wire Wire Line
+	1550 3575 1550 3425
+Wire Wire Line
+	1550 3425 1450 3425
+Wire Wire Line
+	1600 3225 1600 3475
+Wire Wire Line
+	1600 3225 1450 3225
+Text Notes 1450 2950 0    50   ~ 0
+Note priority selector
+Text Label 5350 3550 0    70   ~ 0
+MIDI_LED_C
+Text Label 5350 3900 0    70   ~ 0
+CLOCK_4PQ_C
+Text Label 5350 4550 0    70   ~ 0
+CLOCK_1PQ_C
+Text Label 5350 5200 0    70   ~ 0
+TRIGGER_C
+Text Label 5350 5850 0    70   ~ 0
+GATE_C
+Text Label 2275 5500 2    70   ~ 0
+MIDIPIN5_P
+Wire Wire Line
+	950  5400 950  5675
+NoConn ~ 950  5300
+NoConn ~ 1250 5600
+NoConn ~ 1550 5300
+Wire Wire Line
+	1750 5500 2325 5500
 $Comp
 L Connector:DIN-5_180degree J?
 U 1 1 5F9C6D03
-P 1700 5300
+P 1250 5300
 AR Path="/5F9C6D03" Ref="J?"  Part="1" 
 AR Path="/5F990527/5F9C6D03" Ref="J5"  Part="1" 
-F 0 "J5" H 1650 4900 59  0000 L BNN
-F 1 "DIN-5 MIDI jack" H 1325 5000 59  0000 L BNN
-F 2 "ao_tht:DIN5" H 1700 5300 50  0001 C CNN
-F 3 "" H 1700 5300 50  0001 C CNN
-	1    1700 5300
+F 0 "J5" H 1200 4900 59  0000 L BNN
+F 1 "DIN-5 MIDI jack" H 875 5000 59  0000 L BNN
+F 2 "ao_tht:DIN5" H 1250 5300 50  0001 C CNN
+F 3 "" H 1250 5300 50  0001 C CNN
+	1    1250 5300
 	-1   0    0    1   
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F9C6D0A
+P 2525 5400
+AR Path="/5F9C6D0A" Ref="J?"  Part="1" 
+AR Path="/5F990527/5F9C6D0A" Ref="J7"  Part="1" 
+F 0 "J7" H 2475 5650 50  0000 L CNN
+F 1 "2 pin Molex connector" H 2100 5550 50  0000 L CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 2525 5400 50  0001 C CNN
+F 3 "~" H 2525 5400 50  0001 C CNN
+	1    2525 5400
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2200 5500 2200 5675
-NoConn ~ 1700 5600
-Wire Wire Line
-	1925 3700 2125 3700
-Wire Wire Line
-	1325 3350 1325 3700
-Wire Wire Line
-	1825 3600 1825 3450
-Wire Wire Line
-	1825 3450 1725 3450
-Wire Wire Line
-	1875 3250 1875 3500
-Wire Wire Line
-	1875 3250 1725 3250
-Text Notes 1450 2950 0    50   ~ 0
-Note priority selector
+	1550 5400 2325 5400
+Text Label 2275 5400 2    70   ~ 0
+MIDIPIN4_P
+Text Label 2125 3475 2    70   ~ 0
+SW3_P
+Text Label 2125 3675 2    70   ~ 0
+SW1_P
 $EndSCHEMATC
