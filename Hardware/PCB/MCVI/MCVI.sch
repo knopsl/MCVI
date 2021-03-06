@@ -720,43 +720,43 @@ Wire Wire Line
 	4900 4300 5200 4300
 $Comp
 L Amplifier_Operational:TL074 IC?
-U 2 1 5FA44DDB
+U 4 1 5FA44DDB
 P 5950 3600
 AR Path="/5F9BDFE1/5FA44DDB" Ref="IC?"  Part="3" 
-AR Path="/5FA44DDB" Ref="IC1"  Part="2" 
+AR Path="/5FA44DDB" Ref="IC1"  Part="4" 
 F 0 "IC1" H 5950 3967 50  0000 C CNN
 F 1 "TL074" H 5950 3876 50  0000 C CNN
 F 2 "ao_tht:DIP-14_W7.62mm_Socket_LongPads" H 5900 3700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6000 3800 50  0001 C CNN
-	2    5950 3600
+	4    5950 3600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:TL074 IC?
-U 1 1 5FA44DE1
+U 2 1 5FA44DE1
 P 5950 2475
 AR Path="/5F9BDFE1/5FA44DE1" Ref="IC?"  Part="2" 
-AR Path="/5FA44DE1" Ref="IC1"  Part="1" 
+AR Path="/5FA44DE1" Ref="IC1"  Part="2" 
 F 0 "IC1" H 5950 2842 50  0000 C CNN
 F 1 "TL074" H 5950 2751 50  0000 C CNN
 F 2 "ao_tht:DIP-14_W7.62mm_Socket_LongPads" H 5900 2575 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6000 2675 50  0001 C CNN
-	1    5950 2475
+	2    5950 2475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5200 3500 5650 3500
 $Comp
 L Amplifier_Operational:TL074 IC?
-U 4 1 5FA44E1D
+U 1 1 5FA44E1D
 P 5950 1025
 AR Path="/5F9BDFE1/5FA44E1D" Ref="IC?"  Part="1" 
-AR Path="/5FA44E1D" Ref="IC1"  Part="4" 
+AR Path="/5FA44E1D" Ref="IC1"  Part="1" 
 F 0 "IC1" H 5950 1392 50  0000 C CNN
 F 1 "TL074" H 5950 1301 50  0000 C CNN
 F 2 "ao_tht:DIP-14_W7.62mm_Socket_LongPads" H 5900 1125 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 6000 1225 50  0001 C CNN
-	4    5950 1025
+	1    5950 1025
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1024,23 +1024,23 @@ Wire Wire Line
 	3100 1875 3900 1875
 Wire Wire Line
 	3100 1925 3100 1875
-Text Label 9175 4950 2    50   ~ 0
+Text Label 9175 4650 2    50   ~ 0
 GATE_A
 Text Label 9175 4250 2    50   ~ 0
 CONTROL_A
-Text Label 9175 4150 2    50   ~ 0
+Text Label 9175 4450 2    50   ~ 0
 NOTE_A
-Text Label 9175 4350 2    50   ~ 0
+Text Label 9175 4150 2    50   ~ 0
 PITCH_BEND_A
 Text Label 9175 4550 2    50   ~ 0
 MIDI_LED_A
-Text Label 9175 4850 2    50   ~ 0
-TRIGGER_A
-Text Label 9175 4650 2    50   ~ 0
-CLOCK_4PQ_A
 Text Label 9175 4750 2    50   ~ 0
+TRIGGER_A
+Text Label 9175 4950 2    50   ~ 0
+CLOCK_4PQ_A
+Text Label 9175 4850 2    50   ~ 0
 CLOCK_1PQ_A
-Text Label 9175 4450 2    50   ~ 0
+Text Label 9175 4350 2    50   ~ 0
 VELOCITY_A
 Wire Wire Line
 	9275 5150 9275 5050

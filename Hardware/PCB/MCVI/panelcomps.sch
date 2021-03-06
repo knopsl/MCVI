@@ -143,11 +143,11 @@ F 3 "~" H 7100 5500 50  0001 C CNN
 	1    7100 5500
 	0    1    1    0   
 $EndComp
-Text Label 8000 3150 2    70   ~ 0
+Text Label 8100 2650 2    70   ~ 0
 VELOCITY
-Text Label 8000 3900 2    70   ~ 0
+Text Label 8100 5850 2    70   ~ 0
 CLOCK_4PQ
-Text Label 8000 5200 2    70   ~ 0
+Text Label 8100 4550 2    70   ~ 0
 TRIGGER
 Wire Wire Line
 	4450 3850 4450 3750
@@ -191,7 +191,7 @@ Wire Wire Line
 	4350 3350 5250 3350
 Wire Wire Line
 	8200 2750 8250 2750
-Text Label 8000 2650 2    70   ~ 0
+Text Label 8100 1650 2    70   ~ 0
 PITCH_BEND
 $Comp
 L Connector:AudioJack2 J?
@@ -291,7 +291,7 @@ Wire Wire Line
 	6850 4850 6950 4850
 Wire Wire Line
 	8200 4850 8200 4650
-Text Label 8000 4550 2    70   ~ 0
+Text Label 8100 5200 2    70   ~ 0
 CLOCK_1PQ
 Wire Wire Line
 	5300 3250 5300 3550
@@ -388,7 +388,7 @@ F 3 "" H 8200 4900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8200 4900 8200 4850
-Text Label 8000 5850 2    70   ~ 0
+Text Label 8100 3900 2    70   ~ 0
 GATE
 $Comp
 L Device:R R?
@@ -508,7 +508,7 @@ F 3 "~" H 8450 1650 50  0001 C CNN
 	1    8450 1650
 	-1   0    0    1   
 $EndComp
-Text Label 8000 1650 2    70   ~ 0
+Text Label 8100 3150 2    70   ~ 0
 NOTE
 Wire Wire Line
 	8250 1750 8200 1750
@@ -527,7 +527,7 @@ F 3 "" H 8200 2300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5150 2150 8250 2150
-Text Label 8000 2150 2    70   ~ 0
+Text Label 8100 2150 2    70   ~ 0
 CONTROL
 $Comp
 L Connector:AudioJack2 J?
@@ -660,13 +660,13 @@ Text Notes 1450 2950 0    50   ~ 0
 Note priority selector
 Text Label 5350 3550 0    70   ~ 0
 MIDI_LED_C
-Text Label 5350 3900 0    70   ~ 0
-CLOCK_4PQ_C
-Text Label 5350 4550 0    70   ~ 0
-CLOCK_1PQ_C
-Text Label 5350 5200 0    70   ~ 0
-TRIGGER_C
 Text Label 5350 5850 0    70   ~ 0
+CLOCK_4PQ_C
+Text Label 5350 5200 0    70   ~ 0
+CLOCK_1PQ_C
+Text Label 5350 4550 0    70   ~ 0
+TRIGGER_C
+Text Label 5350 3900 0    70   ~ 0
 GATE_C
 Text Label 2275 5500 2    70   ~ 0
 MIDIPIN5_P
