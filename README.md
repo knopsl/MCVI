@@ -11,6 +11,7 @@ To date the changes have been:
 * Added push button and bicolor LED for configuration.
 * Added CLOCK/4 output; CLOCK will become 4 per quarter note.
 * Buffered digital outputs.
+* Added in-loop series resistors and feedback capacitors on gate outputs.
 * PCB layout for Kosmo format.
 
 I have put a push button and LED in the schematic to be used for configuration... but am not sure how it would be used and may remove it. Could be for tuning but this probably would not be used often enough to justify it. Channel selection, but that needs more feedback than 1 LED (unless restricted to 4 channels, then use off, red, yellow, green — not that satisfactory.) 
