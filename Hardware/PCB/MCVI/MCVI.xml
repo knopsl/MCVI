@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/MIDI to CV/Midi2CV_ao/Hardware/PCB/midi2cv_ao/midi2cv_ao.sch</source>
-    <date>Wed 24 Feb 2021 09:03:12 PM EST</date>
+    <source>/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/MIDI to CV/MCVI/Hardware/PCB/MCVI/MCVI.sch</source>
+    <date>Sat 06 Mar 2021 09:07:24 PM EST</date>
     <tool>Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -10,7 +10,7 @@
         <company>Rich Holmes / Analog Output</company>
         <rev/>
         <date>2020-10-20</date>
-        <source>midi2cv_ao.sch</source>
+        <source>MCVI.sch</source>
         <comment number="1" value="via https://github.com/philippejadin/midi2cv"/>
         <comment number="2" value="Adapted from https://github.com/elkayem/midi2cv"/>
         <comment number="3" value=""/>
@@ -32,7 +32,7 @@
     </sheet>
   </design>
   <components>
-    <comp ref="D1">
+    <comp ref="D2">
       <value>1n5817</value>
       <footprint>ao_tht:D_DO-41_SOD81_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
@@ -40,7 +40,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA18D4E</tstamp>
     </comp>
-    <comp ref="C1">
+    <comp ref="C2">
       <value>10uF</value>
       <footprint>ao_tht:CP_Radial_D5.0mm_P2.00mm</footprint>
       <datasheet>~</datasheet>
@@ -48,7 +48,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA18D5A</tstamp>
     </comp>
-    <comp ref="C2">
+    <comp ref="C3">
       <value>10uF</value>
       <footprint>ao_tht:CP_Radial_D5.0mm_P2.00mm</footprint>
       <datasheet>~</datasheet>
@@ -56,7 +56,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA18D60</tstamp>
     </comp>
-    <comp ref="C4">
+    <comp ref="C6">
       <value>0.1uF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
@@ -64,7 +64,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA18D6C</tstamp>
     </comp>
-    <comp ref="C5">
+    <comp ref="C7">
       <value>0.1uF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
@@ -72,14 +72,14 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA18D72</tstamp>
     </comp>
-    <comp ref="J2">
+    <comp ref="J1">
       <value>Synth_power_2x5</value>
       <footprint>ao_tht:Power_Header</footprint>
       <libsource lib="ao_symbols" part="Synth_power_2x5" description="2x5 shrouded 2.54mm pin header"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA18DC2</tstamp>
     </comp>
-    <comp ref="IC2">
+    <comp ref="IC1">
       <value>TL074</value>
       <footprint>ao_tht:DIP-14_W7.62mm_Socket_LongPads</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/tl071.pdf</datasheet>
@@ -87,7 +87,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA214EE</tstamp>
     </comp>
-    <comp ref="D3">
+    <comp ref="D1">
       <value>1N4148</value>
       <footprint>ao_tht:D_DO-35_SOD27_P7.62mm_Horizontal</footprint>
       <datasheet>https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf</datasheet>
@@ -103,7 +103,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F91A424</tstamp>
     </comp>
-    <comp ref="D2">
+    <comp ref="D3">
       <value>1n5817</value>
       <footprint>ao_tht:D_DO-41_SOD81_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
@@ -111,19 +111,11 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA18D54</tstamp>
     </comp>
-    <comp ref="J1">
-      <value>Conn_01x02</value>
-      <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5FA88D68</tstamp>
-    </comp>
     <comp ref="J3">
-      <value>Conn_01x06</value>
-      <footprint>Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical</footprint>
+      <value>3 pin Molex header</value>
+      <footprint>Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA88D62</tstamp>
     </comp>
@@ -135,7 +127,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FF05EEB</tstamp>
     </comp>
-    <comp ref="C6">
+    <comp ref="C8">
       <value>0.1uF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
@@ -143,7 +135,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FFF18C5</tstamp>
     </comp>
-    <comp ref="C7">
+    <comp ref="C9">
       <value>0.1uF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
@@ -151,7 +143,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FFF18CB</tstamp>
     </comp>
-    <comp ref="IC3">
+    <comp ref="IC2">
       <value>TL074</value>
       <footprint>ao_tht:DIP-14_W7.62mm_Socket_LongPads</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/tl071.pdf</datasheet>
@@ -159,7 +151,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FFF18E5</tstamp>
     </comp>
-    <comp ref="C3">
+    <comp ref="C1">
       <value>0.1uF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
@@ -175,15 +167,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F8F32E1</tstamp>
     </comp>
-    <comp ref="U1">
-      <value>6N137</value>
-      <footprint>ao_tht:DIP-8_W7.62mm_Socket_LongPads</footprint>
-      <datasheet>https://docs.broadcom.com/docs/AV02-0940EN</datasheet>
-      <libsource lib="Isolator" part="6N137" description="Single High Speed LSTTL/TTL Compatible Optocoupler with enable, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>6038C919</tstamp>
-    </comp>
-    <comp ref="DAC2">
+    <comp ref="DAC1">
       <value>MCP4822</value>
       <footprint>ao_tht:DIP-8_W7.62mm_Socket_LongPads</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf</datasheet>
@@ -191,7 +175,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F9BDF64</tstamp>
     </comp>
-    <comp ref="C9">
+    <comp ref="C4">
       <value>0.1uF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
@@ -207,7 +191,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA44E36</tstamp>
     </comp>
-    <comp ref="R5">
+    <comp ref="R6">
       <value>4.7k</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
@@ -223,7 +207,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FA44E2A</tstamp>
     </comp>
-    <comp ref="DAC1">
+    <comp ref="DAC2">
       <value>MCP4822</value>
       <footprint>ao_tht:DIP-8_W7.62mm_Socket_LongPads</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf</datasheet>
@@ -231,7 +215,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F959D49</tstamp>
     </comp>
-    <comp ref="C8">
+    <comp ref="C5">
       <value>0.1uF</value>
       <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
       <datasheet>~</datasheet>
@@ -239,15 +223,95 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5F955360</tstamp>
     </comp>
-    <comp ref="J4">
-      <value>Conn_01x10</value>
+    <comp ref="J2">
+      <value>10 pin header</value>
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector_Generic" part="Conn_01x10" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5FACAF60</tstamp>
     </comp>
-    <comp ref="R11">
+    <comp ref="R5">
+      <value>1k</value>
+      <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604577C5</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>1k</value>
+      <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6047AEEF</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>1k</value>
+      <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6047B4F1</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>1k</value>
+      <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6047B7DB</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>33pF</value>
+      <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>604A3981</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>33pF</value>
+      <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6055CC5D</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>33pF</value>
+      <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60565B72</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>33pF</value>
+      <footprint>ao_tht:C_Disc_D3.0mm_W1.6mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>605C02F6</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>6N137</value>
+      <footprint>ao_tht:DIP-8_W7.62mm_Socket_LongPads</footprint>
+      <datasheet>https://docs.broadcom.com/docs/AV02-0940EN</datasheet>
+      <libsource lib="Isolator" part="6N137" description="Single High Speed LSTTL/TTL Compatible Optocoupler with enable, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6038C919</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>2 pin Molex header</value>
+      <footprint>Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60533A47</tstamp>
+    </comp>
+    <comp ref="R15">
       <value>1k</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
@@ -255,7 +319,7 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDCF1</tstamp>
     </comp>
-    <comp ref="D8">
+    <comp ref="D7">
       <value>LED</value>
       <footprint>ao_tht:LED_D5.0mm</footprint>
       <datasheet>~</datasheet>
@@ -263,7 +327,7 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDCFD</tstamp>
     </comp>
-    <comp ref="R7">
+    <comp ref="R11">
       <value>1k</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
@@ -271,7 +335,7 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDD07</tstamp>
     </comp>
-    <comp ref="D6">
+    <comp ref="D5">
       <value>LED</value>
       <footprint>ao_tht:LED_D5.0mm</footprint>
       <datasheet>~</datasheet>
@@ -295,32 +359,24 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F973149</tstamp>
     </comp>
-    <comp ref="R8">
-      <value>2.2k</value>
+    <comp ref="R12">
+      <value>470R</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9B97F1</tstamp>
     </comp>
-    <comp ref="R12">
-      <value>2.2k</value>
+    <comp ref="R16">
+      <value>470R</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9B9A31</tstamp>
     </comp>
-    <comp ref="J6">
-      <value>Conn_01x02</value>
-      <footprint>ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
-      <tstamp>5F9C6D0A</tstamp>
-    </comp>
     <comp ref="J8">
-      <value>Conn_01x10</value>
+      <value>10 pin socket</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector_Generic" part="Conn_01x10" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
@@ -335,15 +391,15 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F97313D</tstamp>
     </comp>
-    <comp ref="R6">
-      <value>2.2k</value>
+    <comp ref="R10">
+      <value>470R</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BA08E</tstamp>
     </comp>
-    <comp ref="D5">
+    <comp ref="D4">
       <value>LED</value>
       <footprint>ao_tht:LED_D5.0mm</footprint>
       <datasheet>~</datasheet>
@@ -351,7 +407,7 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDD30</tstamp>
     </comp>
-    <comp ref="R9">
+    <comp ref="R13">
       <value>1k</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
@@ -359,15 +415,15 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDC71</tstamp>
     </comp>
-    <comp ref="R10">
-      <value>2.2k</value>
+    <comp ref="R14">
+      <value>470R</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDC77</tstamp>
     </comp>
-    <comp ref="D7">
+    <comp ref="D6">
       <value>LED</value>
       <footprint>ao_tht:LED_D5.0mm</footprint>
       <datasheet>~</datasheet>
@@ -391,8 +447,8 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDD29</tstamp>
     </comp>
-    <comp ref="R14">
-      <value>2.2k</value>
+    <comp ref="R18">
+      <value>470R</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
@@ -407,7 +463,7 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDD1D</tstamp>
     </comp>
-    <comp ref="D9">
+    <comp ref="D8">
       <value>LED</value>
       <footprint>ao_tht:LED_D5.0mm</footprint>
       <datasheet>~</datasheet>
@@ -415,7 +471,7 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9BDCE7</tstamp>
     </comp>
-    <comp ref="R13">
+    <comp ref="R17">
       <value>1k</value>
       <footprint>ao_tht:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
       <datasheet>~</datasheet>
@@ -439,7 +495,7 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F973143</tstamp>
     </comp>
-    <comp ref="SW2">
+    <comp ref="SW1">
       <value>SW_SPDT</value>
       <footprint>ao_tht:SPDT-toggle-switch-1M-series</footprint>
       <datasheet>~</datasheet>
@@ -447,36 +503,28 @@
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9D6D35</tstamp>
     </comp>
-    <comp ref="J7">
-      <value>Conn_01x06</value>
-      <footprint>Connector_Molex:Molex_KK-254_AE-6410-06A_1x06_P2.54mm_Vertical</footprint>
+    <comp ref="J6">
+      <value>3 pin Molex connector</value>
+      <footprint>Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical</footprint>
       <datasheet>~</datasheet>
-      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5FAAC32F</tstamp>
     </comp>
-    <comp ref="SW1">
-      <value>SW_Push</value>
-      <footprint>ao_tht:Push_button_A-5050</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
-      <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
-      <tstamp>5FAD8C7C</tstamp>
-    </comp>
-    <comp ref="D4">
-      <value>LED_Dual_ACA</value>
-      <footprint>ao_tht:LED_D5.0mm-3</footprint>
-      <datasheet>~</datasheet>
-      <libsource lib="Device" part="LED_Dual_ACA" description="Dual LED, common cathode on pin 2"/>
-      <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
-      <tstamp>5FABBD2B</tstamp>
-    </comp>
     <comp ref="J5">
-      <value>MIDIJACK</value>
+      <value>DIN-5 MIDI jack</value>
       <footprint>ao_tht:DIN5</footprint>
       <libsource lib="Connector" part="DIN-5_180degree" description="5-pin DIN connector (5-pin DIN-5 stereo)"/>
       <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
       <tstamp>5F9C6D03</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>2 pin Molex connector</value>
+      <footprint>ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/Panel components/" tstamps="/5F990527/"/>
+      <tstamp>5F9C6D0A</tstamp>
     </comp>
   </components>
   <libparts>
@@ -611,23 +659,20 @@
         <pin num="2" name="Pin_2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Connector_Generic" part="Conn_01x06">
-      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
       <footprints>
         <fp>Connector*:*_1x??_*</fp>
       </footprints>
       <fields>
         <field name="Reference">J</field>
-        <field name="Value">Conn_01x06</field>
+        <field name="Value">Conn_01x03</field>
       </fields>
       <pins>
         <pin num="1" name="Pin_1" type="passive"/>
         <pin num="2" name="Pin_2" type="passive"/>
         <pin num="3" name="Pin_3" type="passive"/>
-        <pin num="4" name="Pin_4" type="passive"/>
-        <pin num="5" name="Pin_5" type="passive"/>
-        <pin num="6" name="Pin_6" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x10">
@@ -716,24 +761,6 @@
       <pins>
         <pin num="1" name="K" type="passive"/>
         <pin num="2" name="A" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="LED_Dual_ACA">
-      <description>Dual LED, common cathode on pin 2</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>LED*</fp>
-        <fp>LED_SMD:*</fp>
-        <fp>LED_THT:*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED_Dual_ACA</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A1" type="input"/>
-        <pin num="2" name="K" type="input"/>
-        <pin num="3" name="A2" type="input"/>
       </pins>
     </libpart>
     <libpart lib="Device" part="R">
@@ -861,18 +888,6 @@
         <pin num="30" name="VIN" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="Switch" part="SW_Push">
-      <description>Push button switch, generic, two pins</description>
-      <docs>~</docs>
-      <fields>
-        <field name="Reference">SW</field>
-        <field name="Value">SW_Push</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Switch" part="SW_SPDT">
       <description>Switch, single pole double throw</description>
       <docs>~</docs>
@@ -935,389 +950,396 @@
       <uri>/usr/share/kicad/library/Switch.lib</uri>
     </library>
     <library logical="ao_symbols">
-      <uri>/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/MIDI to CV/Midi2CV_ao/Hardware/PCB/midi2cv_ao/ao_symbols.lib</uri>
+      <uri>/home/rsholmes/Documents/Hobbies/Music/Instruments/Synths/Scratch/MIDI to CV/MCVI/Hardware/PCB/MCVI/ao_symbols.lib</uri>
     </library>
   </libraries>
   <nets>
     <net code="1" name="GND">
-      <node ref="C1" pin="2"/>
-      <node ref="U1" pin="5"/>
-      <node ref="J2" pin="5"/>
-      <node ref="J2" pin="4"/>
-      <node ref="J2" pin="3"/>
       <node ref="J3" pin="1"/>
-      <node ref="C2" pin="1"/>
-      <node ref="J2" pin="7"/>
-      <node ref="J2" pin="8"/>
+      <node ref="U1" pin="5"/>
+      <node ref="J2" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="DAC1" pin="7"/>
+      <node ref="DAC1" pin="5"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C9" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="J1" pin="5"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="J1" pin="8"/>
+      <node ref="J1" pin="7"/>
+      <node ref="J1" pin="6"/>
+      <node ref="J1" pin="4"/>
+      <node ref="J1" pin="3"/>
+      <node ref="A1" pin="4"/>
+      <node ref="A1" pin="29"/>
+      <node ref="R3" pin="1"/>
       <node ref="DAC2" pin="5"/>
       <node ref="DAC2" pin="7"/>
-      <node ref="C9" pin="2"/>
-      <node ref="J4" pin="1"/>
-      <node ref="J2" pin="6"/>
-      <node ref="C5" pin="1"/>
-      <node ref="C4" pin="2"/>
-      <node ref="R3" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="A1" pin="4"/>
-      <node ref="C6" pin="2"/>
-      <node ref="A1" pin="29"/>
-      <node ref="C7" pin="1"/>
-      <node ref="C8" pin="2"/>
-      <node ref="DAC1" pin="5"/>
-      <node ref="DAC1" pin="7"/>
+      <node ref="C5" pin="2"/>
     </net>
-    <net code="2" name="Net-(IC3-Pad13)">
-      <node ref="R4" pin="2"/>
-      <node ref="R3" pin="2"/>
-      <node ref="IC3" pin="13"/>
-    </net>
-    <net code="3" name="Net-(R4-Pad1)">
-      <node ref="R5" pin="2"/>
-      <node ref="R4" pin="1"/>
-    </net>
-    <net code="4" name="Net-(DAC2-Pad8)">
-      <node ref="IC3" pin="12"/>
-      <node ref="DAC2" pin="8"/>
-    </net>
-    <net code="5" name="Net-(DAC1-Pad8)">
-      <node ref="DAC1" pin="8"/>
-      <node ref="IC3" pin="5"/>
-    </net>
-    <net code="6" name="/TRIGGER_B">
-      <node ref="IC2" pin="10"/>
-      <node ref="A1" pin="6"/>
-    </net>
-    <net code="7" name="/CLOCK_4_B">
-      <node ref="IC2" pin="3"/>
-      <node ref="A1" pin="8"/>
-    </net>
-    <net code="8" name="/PROG_LED1">
-      <node ref="A1" pin="22"/>
-      <node ref="J3" pin="5"/>
-    </net>
-    <net code="9" name="/DAC2_SEL">
-      <node ref="A1" pin="12"/>
-      <node ref="DAC1" pin="2"/>
-    </net>
-    <net code="10" name="/DAC1_SEL">
-      <node ref="DAC2" pin="2"/>
-      <node ref="A1" pin="11"/>
-    </net>
-    <net code="11" name="/SW3">
-      <node ref="A1" pin="19"/>
-      <node ref="J3" pin="2"/>
-    </net>
-    <net code="12" name="/SW1">
-      <node ref="A1" pin="20"/>
-      <node ref="J3" pin="3"/>
-    </net>
-    <net code="13" name="/BUT">
-      <node ref="A1" pin="21"/>
-      <node ref="J3" pin="4"/>
-    </net>
-    <net code="14" name="/PROG_LED2">
-      <node ref="A1" pin="23"/>
-      <node ref="J3" pin="6"/>
-    </net>
-    <net code="15" name="Net-(U1-Pad7)">
-      <node ref="U1" pin="7"/>
-    </net>
-    <net code="16" name="Net-(DAC1-Pad6)">
-      <node ref="DAC1" pin="6"/>
-      <node ref="IC3" pin="10"/>
-    </net>
-    <net code="17" name="Net-(DAC2-Pad6)">
+    <net code="2" name="/CONTROL_B">
       <node ref="DAC2" pin="6"/>
-      <node ref="IC3" pin="3"/>
+      <node ref="IC1" pin="10"/>
     </net>
-    <net code="18" name="/CLOCK_B">
-      <node ref="A1" pin="7"/>
-      <node ref="IC2" pin="5"/>
+    <net code="3" name="+5V">
+      <node ref="DAC1" pin="1"/>
+      <node ref="DAC2" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R2" pin="1"/>
+      <node ref="U1" pin="8"/>
+      <node ref="A1" pin="27"/>
+      <node ref="C4" pin="1"/>
     </net>
-    <net code="19" name="/SDI">
-      <node ref="A1" pin="14"/>
-      <node ref="DAC1" pin="4"/>
-      <node ref="DAC2" pin="4"/>
-    </net>
-    <net code="20" name="/SCK">
-      <node ref="A1" pin="16"/>
-      <node ref="DAC1" pin="3"/>
-      <node ref="DAC2" pin="3"/>
-    </net>
-    <net code="21" name="/MIDI_LED_A">
-      <node ref="A1" pin="13"/>
-      <node ref="J4" pin="6"/>
-    </net>
-    <net code="22" name="/CLOCK_4_A">
-      <node ref="IC2" pin="2"/>
-      <node ref="J4" pin="5"/>
-      <node ref="IC2" pin="1"/>
-    </net>
-    <net code="23" name="/CLOCK_A">
-      <node ref="IC2" pin="6"/>
-      <node ref="J4" pin="4"/>
-      <node ref="IC2" pin="7"/>
-    </net>
-    <net code="24" name="/TRIGGER_A">
-      <node ref="J4" pin="3"/>
-      <node ref="IC2" pin="9"/>
-      <node ref="IC2" pin="8"/>
-    </net>
-    <net code="25" name="/VELOCITY_A">
-      <node ref="J4" pin="7"/>
-      <node ref="IC3" pin="1"/>
-      <node ref="IC3" pin="2"/>
-    </net>
-    <net code="26" name="/PITCH_BEND_A">
-      <node ref="IC3" pin="7"/>
-      <node ref="J4" pin="8"/>
-      <node ref="IC3" pin="6"/>
-    </net>
-    <net code="27" name="/NOTE_A">
-      <node ref="J4" pin="10"/>
-      <node ref="R5" pin="1"/>
-      <node ref="IC3" pin="14"/>
-    </net>
-    <net code="28" name="/CONTROL_A">
-      <node ref="IC3" pin="8"/>
-      <node ref="J4" pin="9"/>
-      <node ref="IC3" pin="9"/>
-    </net>
-    <net code="29" name="/GATE_A">
-      <node ref="IC2" pin="14"/>
-      <node ref="J4" pin="2"/>
-      <node ref="IC2" pin="13"/>
-    </net>
-    <net code="30" name="/GATE_B">
+    <net code="4" name="/GATE_B">
       <node ref="IC2" pin="12"/>
       <node ref="A1" pin="5"/>
     </net>
-    <net code="31" name="/RX0">
-      <node ref="A1" pin="2"/>
-      <node ref="R2" pin="2"/>
-      <node ref="U1" pin="6"/>
+    <net code="5" name="/CLOCK_1PQ_B">
+      <node ref="IC2" pin="5"/>
+      <node ref="A1" pin="7"/>
     </net>
-    <net code="32" name="/MIDIPIN5">
-      <node ref="J1" pin="2"/>
-      <node ref="D3" pin="2"/>
-      <node ref="U1" pin="3"/>
+    <net code="6" name="/GATE_A">
+      <node ref="IC2" pin="14"/>
+      <node ref="IC2" pin="13"/>
+      <node ref="J2" pin="5"/>
     </net>
-    <net code="33" name="Net-(D3-Pad1)">
-      <node ref="U1" pin="2"/>
-      <node ref="R1" pin="1"/>
-      <node ref="D3" pin="1"/>
+    <net code="7" name="/MIDI_LED_A">
+      <node ref="J2" pin="6"/>
+      <node ref="A1" pin="13"/>
     </net>
-    <net code="34" name="-12V">
-      <node ref="D2" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="IC2" pin="11"/>
-      <node ref="IC3" pin="11"/>
-      <node ref="C2" pin="2"/>
-      <node ref="C7" pin="2"/>
+    <net code="8" name="/VELOCITY_A">
+      <node ref="C11" pin="2"/>
+      <node ref="J2" pin="8"/>
+      <node ref="R7" pin="1"/>
+      <node ref="IC1" pin="6"/>
     </net>
-    <net code="35" name="+12V">
-      <node ref="A1" pin="30"/>
-      <node ref="C6" pin="1"/>
-      <node ref="D1" pin="1"/>
-      <node ref="IC2" pin="4"/>
-      <node ref="C4" pin="1"/>
-      <node ref="C1" pin="1"/>
-      <node ref="IC3" pin="4"/>
+    <net code="9" name="/CLOCK_4PQ_A">
+      <node ref="J2" pin="2"/>
+      <node ref="IC2" pin="2"/>
+      <node ref="IC2" pin="1"/>
     </net>
-    <net code="36" name="Net-(D1-Pad2)">
+    <net code="10" name="/TRIGGER_A">
+      <node ref="J2" pin="4"/>
+      <node ref="IC2" pin="8"/>
+      <node ref="IC2" pin="9"/>
+    </net>
+    <net code="11" name="/PITCH_BEND_A">
       <node ref="J2" pin="10"/>
+      <node ref="R8" pin="1"/>
+      <node ref="IC1" pin="13"/>
+      <node ref="C12" pin="2"/>
+    </net>
+    <net code="12" name="/NOTE_A">
+      <node ref="J2" pin="7"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="13" name="/CONTROL_A">
       <node ref="J2" pin="9"/>
+      <node ref="C13" pin="2"/>
+      <node ref="R9" pin="1"/>
+      <node ref="IC1" pin="9"/>
+    </net>
+    <net code="14" name="/TRIGGER_B">
+      <node ref="A1" pin="6"/>
+      <node ref="IC2" pin="10"/>
+    </net>
+    <net code="15" name="/SDI">
+      <node ref="A1" pin="14"/>
+      <node ref="DAC2" pin="4"/>
+      <node ref="DAC1" pin="4"/>
+    </net>
+    <net code="16" name="/SCK">
+      <node ref="DAC2" pin="3"/>
+      <node ref="A1" pin="16"/>
+      <node ref="DAC1" pin="3"/>
+    </net>
+    <net code="17" name="Net-(C10-Pad2)">
+      <node ref="R3" pin="2"/>
+      <node ref="C10" pin="2"/>
+      <node ref="IC1" pin="2"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="18" name="Net-(R4-Pad1)">
+      <node ref="R4" pin="1"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="19" name="Net-(C11-Pad1)">
+      <node ref="R7" pin="2"/>
+      <node ref="IC1" pin="7"/>
+      <node ref="C11" pin="1"/>
+    </net>
+    <net code="20" name="/CLOCK_4PQ_B">
+      <node ref="IC2" pin="3"/>
+      <node ref="A1" pin="8"/>
+    </net>
+    <net code="21" name="Net-(C13-Pad1)">
+      <node ref="C13" pin="1"/>
+      <node ref="R9" pin="2"/>
+      <node ref="IC1" pin="8"/>
+    </net>
+    <net code="22" name="Net-(C12-Pad1)">
+      <node ref="IC1" pin="14"/>
+      <node ref="R8" pin="2"/>
+      <node ref="C12" pin="1"/>
+    </net>
+    <net code="23" name="Net-(C10-Pad1)">
+      <node ref="R5" pin="2"/>
+      <node ref="C10" pin="1"/>
+      <node ref="IC1" pin="1"/>
+    </net>
+    <net code="24" name="/PITCH_BEND_B">
+      <node ref="DAC2" pin="8"/>
+      <node ref="IC1" pin="12"/>
+    </net>
+    <net code="25" name="/VELOCITY_B">
+      <node ref="IC1" pin="5"/>
+      <node ref="DAC1" pin="6"/>
+    </net>
+    <net code="26" name="/NOTE_B">
+      <node ref="DAC1" pin="8"/>
+      <node ref="IC1" pin="3"/>
+    </net>
+    <net code="27" name="/MIDIPIN5">
+      <node ref="U1" pin="3"/>
+      <node ref="J4" pin="2"/>
       <node ref="D1" pin="2"/>
     </net>
-    <net code="37" name="/MIDIPIN4">
-      <node ref="J1" pin="1"/>
+    <net code="28" name="/MIDIPIN4">
       <node ref="R1" pin="2"/>
+      <node ref="J4" pin="1"/>
     </net>
-    <net code="38" name="Net-(A1-Pad10)">
-      <node ref="A1" pin="10"/>
+    <net code="29" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
     </net>
-    <net code="39" name="Net-(D2-Pad1)">
-      <node ref="D2" pin="1"/>
-      <node ref="J2" pin="2"/>
-      <node ref="J2" pin="1"/>
+    <net code="30" name="Net-(D1-Pad1)">
+      <node ref="U1" pin="2"/>
+      <node ref="R1" pin="1"/>
+      <node ref="D1" pin="1"/>
     </net>
-    <net code="40" name="Net-(A1-Pad9)">
-      <node ref="A1" pin="9"/>
-    </net>
-    <net code="41" name="Net-(A1-Pad1)">
-      <node ref="A1" pin="1"/>
-    </net>
-    <net code="42" name="Net-(A1-Pad15)">
-      <node ref="A1" pin="15"/>
-    </net>
-    <net code="43" name="Net-(A1-Pad17)">
-      <node ref="A1" pin="17"/>
-    </net>
-    <net code="44" name="Net-(A1-Pad18)">
-      <node ref="A1" pin="18"/>
-    </net>
-    <net code="45" name="Net-(A1-Pad24)">
-      <node ref="A1" pin="24"/>
-    </net>
-    <net code="46" name="Net-(A1-Pad25)">
-      <node ref="A1" pin="25"/>
-    </net>
-    <net code="47" name="Net-(A1-Pad26)">
-      <node ref="A1" pin="26"/>
-    </net>
-    <net code="48" name="Net-(A1-Pad28)">
-      <node ref="A1" pin="28"/>
-    </net>
-    <net code="49" name="Net-(A1-Pad3)">
-      <node ref="A1" pin="3"/>
-    </net>
-    <net code="50" name="Net-(U1-Pad1)">
+    <net code="31" name="Net-(U1-Pad1)">
       <node ref="U1" pin="1"/>
     </net>
-    <net code="51" name="+5V">
-      <node ref="DAC2" pin="1"/>
-      <node ref="C9" pin="1"/>
-      <node ref="U1" pin="8"/>
-      <node ref="A1" pin="27"/>
-      <node ref="R2" pin="1"/>
-      <node ref="DAC1" pin="1"/>
-      <node ref="C8" pin="1"/>
+    <net code="32" name="Net-(A1-Pad23)">
+      <node ref="A1" pin="23"/>
+    </net>
+    <net code="33" name="Net-(A1-Pad22)">
+      <node ref="A1" pin="22"/>
+    </net>
+    <net code="34" name="Net-(A1-Pad20)">
+      <node ref="A1" pin="20"/>
+    </net>
+    <net code="35" name="/CLOCK_1PQ_A">
+      <node ref="IC2" pin="7"/>
+      <node ref="J2" pin="3"/>
+      <node ref="IC2" pin="6"/>
+    </net>
+    <net code="36" name="Net-(A1-Pad10)">
+      <node ref="A1" pin="10"/>
+    </net>
+    <net code="37" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1"/>
+      <node ref="J1" pin="1"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="38" name="Net-(D2-Pad2)">
+      <node ref="J1" pin="10"/>
+      <node ref="J1" pin="9"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="39" name="-12V">
+      <node ref="IC2" pin="11"/>
       <node ref="C3" pin="2"/>
+      <node ref="IC1" pin="11"/>
+      <node ref="C7" pin="2"/>
+      <node ref="D3" pin="2"/>
+      <node ref="C9" pin="2"/>
     </net>
-    <net code="52" name="Net-(J7-Pad3)">
-      <node ref="J7" pin="3"/>
-      <node ref="SW2" pin="1"/>
+    <net code="40" name="+12V">
+      <node ref="C6" pin="1"/>
+      <node ref="IC1" pin="4"/>
+      <node ref="D2" pin="1"/>
+      <node ref="IC2" pin="4"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="A1" pin="30"/>
     </net>
-    <net code="53" name="Net-(J7-Pad2)">
-      <node ref="J7" pin="2"/>
-      <node ref="SW2" pin="3"/>
+    <net code="41" name="/SW1">
+      <node ref="A1" pin="21"/>
+      <node ref="J3" pin="2"/>
     </net>
-    <net code="54" name="GND1">
-      <node ref="J14" pin="S"/>
-      <node ref="J13" pin="S"/>
-      <node ref="J16" pin="S"/>
-      <node ref="J8" pin="1"/>
-      <node ref="J12" pin="S"/>
-      <node ref="D6" pin="1"/>
-      <node ref="D8" pin="1"/>
-      <node ref="J15" pin="S"/>
-      <node ref="D5" pin="1"/>
-      <node ref="J11" pin="S"/>
-      <node ref="J10" pin="S"/>
-      <node ref="D7" pin="1"/>
-      <node ref="D9" pin="1"/>
-      <node ref="J9" pin="S"/>
+    <net code="42" name="/SW3">
+      <node ref="J3" pin="3"/>
+      <node ref="A1" pin="19"/>
     </net>
-    <net code="55" name="/Panel components/NOTE">
-      <node ref="J8" pin="10"/>
-      <node ref="J9" pin="T"/>
+    <net code="43" name="Net-(A1-Pad3)">
+      <node ref="A1" pin="3"/>
+    </net>
+    <net code="44" name="Net-(A1-Pad9)">
+      <node ref="A1" pin="9"/>
+    </net>
+    <net code="45" name="Net-(A1-Pad28)">
+      <node ref="A1" pin="28"/>
+    </net>
+    <net code="46" name="Net-(A1-Pad26)">
+      <node ref="A1" pin="26"/>
+    </net>
+    <net code="47" name="Net-(A1-Pad25)">
+      <node ref="A1" pin="25"/>
+    </net>
+    <net code="48" name="Net-(A1-Pad24)">
+      <node ref="A1" pin="24"/>
+    </net>
+    <net code="49" name="/RX0">
+      <node ref="R2" pin="2"/>
+      <node ref="U1" pin="6"/>
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="50" name="Net-(A1-Pad18)">
+      <node ref="A1" pin="18"/>
+    </net>
+    <net code="51" name="Net-(A1-Pad17)">
+      <node ref="A1" pin="17"/>
+    </net>
+    <net code="52" name="Net-(A1-Pad15)">
+      <node ref="A1" pin="15"/>
+    </net>
+    <net code="53" name="/DAC2_SEL">
+      <node ref="DAC2" pin="2"/>
+      <node ref="A1" pin="12"/>
+    </net>
+    <net code="54" name="/DAC1_SEL">
+      <node ref="DAC1" pin="2"/>
+      <node ref="A1" pin="11"/>
+    </net>
+    <net code="55" name="Net-(A1-Pad1)">
+      <node ref="A1" pin="1"/>
     </net>
     <net code="56" name="/Panel components/CONTROL">
-      <node ref="J10" pin="T"/>
       <node ref="J8" pin="9"/>
+      <node ref="J10" pin="T"/>
     </net>
-    <net code="57" name="Net-(J5-Pad4)">
-      <node ref="J5" pin="4"/>
-      <node ref="J6" pin="1"/>
-    </net>
-    <net code="58" name="Net-(J5-Pad1)">
-      <node ref="J5" pin="1"/>
-    </net>
-    <net code="59" name="Net-(J5-Pad2)">
-      <node ref="J5" pin="2"/>
-    </net>
-    <net code="60" name="Net-(J5-Pad3)">
-      <node ref="J5" pin="3"/>
-    </net>
-    <net code="61" name="Net-(D4-Pad1)">
-      <node ref="J7" pin="4"/>
+    <net code="57" name="GND1">
+      <node ref="J16" pin="S"/>
+      <node ref="J8" pin="1"/>
+      <node ref="J11" pin="S"/>
+      <node ref="J15" pin="S"/>
       <node ref="D4" pin="1"/>
+      <node ref="D5" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="J14" pin="S"/>
+      <node ref="J12" pin="S"/>
+      <node ref="J13" pin="S"/>
+      <node ref="J10" pin="S"/>
+      <node ref="D8" pin="1"/>
+      <node ref="D6" pin="1"/>
+      <node ref="J9" pin="S"/>
     </net>
-    <net code="62" name="Net-(J7-Pad6)">
-      <node ref="SW1" pin="2"/>
-      <node ref="J7" pin="6"/>
-    </net>
-    <net code="63" name="GND2">
-      <node ref="SW2" pin="2"/>
-      <node ref="J7" pin="1"/>
+    <net code="58" name="Net-(J6-Pad2)">
       <node ref="SW1" pin="1"/>
-      <node ref="D4" pin="2"/>
-    </net>
-    <net code="64" name="Net-(D4-Pad3)">
-      <node ref="J7" pin="5"/>
-      <node ref="D4" pin="3"/>
-    </net>
-    <net code="65" name="/Panel components/VELOCITY">
-      <node ref="J12" pin="T"/>
-      <node ref="J8" pin="7"/>
-    </net>
-    <net code="66" name="/Panel components/CLOCK_4">
-      <node ref="J13" pin="T"/>
-      <node ref="R7" pin="1"/>
-    </net>
-    <net code="67" name="/Panel components/TRIGGER">
-      <node ref="R11" pin="1"/>
-      <node ref="J15" pin="T"/>
-    </net>
-    <net code="68" name="Net-(J5-Pad5)">
       <node ref="J6" pin="2"/>
-      <node ref="J5" pin="5"/>
     </net>
-    <net code="69" name="Net-(J8-Pad5)">
-      <node ref="R8" pin="2"/>
-      <node ref="J8" pin="5"/>
-      <node ref="R7" pin="2"/>
-    </net>
-    <net code="70" name="Net-(J8-Pad3)">
-      <node ref="J8" pin="3"/>
-      <node ref="R11" pin="2"/>
-      <node ref="R12" pin="2"/>
-    </net>
-    <net code="71" name="Net-(D8-Pad2)">
-      <node ref="R12" pin="1"/>
+    <net code="59" name="Net-(D8-Pad2)">
+      <node ref="R18" pin="1"/>
       <node ref="D8" pin="2"/>
     </net>
-    <net code="72" name="Net-(D6-Pad2)">
-      <node ref="R8" pin="1"/>
-      <node ref="D6" pin="2"/>
+    <net code="60" name="/Panel components/NOTE">
+      <node ref="J8" pin="7"/>
+      <node ref="J12" pin="T"/>
     </net>
-    <net code="73" name="/Panel components/GATE">
-      <node ref="J16" pin="T"/>
-      <node ref="R13" pin="1"/>
+    <net code="61" name="Net-(J5-Pad1)">
+      <node ref="J5" pin="1"/>
     </net>
-    <net code="74" name="Net-(D9-Pad2)">
-      <node ref="D9" pin="2"/>
-      <node ref="R14" pin="1"/>
+    <net code="62" name="/Panel components/MIDIPIN5_P">
+      <node ref="J7" pin="2"/>
+      <node ref="J5" pin="5"/>
     </net>
-    <net code="75" name="Net-(J8-Pad2)">
-      <node ref="R13" pin="2"/>
-      <node ref="J8" pin="2"/>
-      <node ref="R14" pin="2"/>
+    <net code="63" name="Net-(J5-Pad3)">
+      <node ref="J5" pin="3"/>
     </net>
-    <net code="76" name="/Panel components/PITCH_BEND">
+    <net code="64" name="Net-(J5-Pad2)">
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="65" name="/Panel components/MIDIPIN4_P">
+      <node ref="J7" pin="1"/>
+      <node ref="J5" pin="4"/>
+    </net>
+    <net code="66" name="/Panel components/SW3_P">
+      <node ref="SW1" pin="3"/>
+      <node ref="J6" pin="3"/>
+    </net>
+    <net code="67" name="GND2">
+      <node ref="J6" pin="1"/>
+      <node ref="SW1" pin="2"/>
+    </net>
+    <net code="68" name="/Panel components/VELOCITY">
       <node ref="J11" pin="T"/>
       <node ref="J8" pin="8"/>
     </net>
-    <net code="77" name="Net-(J8-Pad6)">
-      <node ref="R6" pin="2"/>
+    <net code="69" name="/Panel components/CLOCK_4PQ">
+      <node ref="J16" pin="T"/>
+      <node ref="R17" pin="1"/>
+    </net>
+    <net code="70" name="/Panel components/TRIGGER">
+      <node ref="R13" pin="1"/>
+      <node ref="J14" pin="T"/>
+    </net>
+    <net code="71" name="/Panel components/CLOCK_4PQ_C">
+      <node ref="R18" pin="2"/>
+      <node ref="J8" pin="2"/>
+      <node ref="R17" pin="2"/>
+    </net>
+    <net code="72" name="/Panel components/MIDI_LED_C">
       <node ref="J8" pin="6"/>
-    </net>
-    <net code="78" name="Net-(D5-Pad2)">
-      <node ref="R6" pin="1"/>
-      <node ref="D5" pin="2"/>
-    </net>
-    <net code="79" name="Net-(D7-Pad2)">
-      <node ref="D7" pin="2"/>
-      <node ref="R10" pin="1"/>
-    </net>
-    <net code="80" name="Net-(J8-Pad4)">
-      <node ref="R9" pin="2"/>
-      <node ref="J8" pin="4"/>
       <node ref="R10" pin="2"/>
     </net>
-    <net code="81" name="/Panel components/CLOCK">
-      <node ref="R9" pin="1"/>
-      <node ref="J14" pin="T"/>
+    <net code="73" name="/Panel components/CLOCK_1PQ_C">
+      <node ref="R15" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="J8" pin="3"/>
+    </net>
+    <net code="74" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2"/>
+      <node ref="R16" pin="1"/>
+    </net>
+    <net code="75" name="/Panel components/GATE_C">
+      <node ref="R12" pin="2"/>
+      <node ref="J8" pin="5"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="76" name="Net-(D5-Pad2)">
+      <node ref="R12" pin="1"/>
+      <node ref="D5" pin="2"/>
+    </net>
+    <net code="77" name="/Panel components/GATE">
+      <node ref="R11" pin="1"/>
+      <node ref="J13" pin="T"/>
+    </net>
+    <net code="78" name="/Panel components/PITCH_BEND">
+      <node ref="J9" pin="T"/>
+      <node ref="J8" pin="10"/>
+    </net>
+    <net code="79" name="Net-(D4-Pad2)">
+      <node ref="R10" pin="1"/>
+      <node ref="D4" pin="2"/>
+    </net>
+    <net code="80" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="81" name="/Panel components/TRIGGER_C">
+      <node ref="R13" pin="2"/>
+      <node ref="R14" pin="2"/>
+      <node ref="J8" pin="4"/>
+    </net>
+    <net code="82" name="/Panel components/CLOCK_1PQ">
+      <node ref="J15" pin="T"/>
+      <node ref="R15" pin="1"/>
     </net>
   </nets>
 </export>
