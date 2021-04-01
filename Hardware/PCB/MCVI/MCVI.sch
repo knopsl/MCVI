@@ -333,15 +333,17 @@ Wire Wire Line
 Text Label 9275 5725 2    50   ~ 0
 SW3
 $Comp
-L Connector_Generic:Conn_01x03 J3
+L ao_symbols:3_pin_Molex_header J3
 U 1 1 5FA88D62
 P 9575 5825
 AR Path="/5FA88D62" Ref="J3"  Part="1" 
 AR Path="/5F990527/5FA88D62" Ref="J?"  Part="1" 
 F 0 "J3" H 9575 5475 50  0000 C CNN
 F 1 "3 pin Molex header" H 9575 5575 50  0000 C CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 9575 5825 50  0001 C CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 9575 5825 50  0001 C CNN
 F 3 "~" H 9575 5825 50  0001 C CNN
+F 4 "A-805" H 9575 5825 50  0001 C CNN "SKU"
+F 5 "Tayda" H 9575 5825 50  0001 C CNN "Vendor"
 	1    9575 5825
 	1    0    0    1   
 $EndComp
@@ -1379,15 +1381,17 @@ Wire Notes Line
 Text Notes 10000 3775 2    70   ~ 0
 Panel and jacks board connections
 $Comp
-L Connector_Generic:Conn_01x02 J4
+L ao_symbols:2_pin_Molex_header J4
 U 1 1 60533A47
 P 9575 6500
 AR Path="/60533A47" Ref="J4"  Part="1" 
 AR Path="/5F990527/60533A47" Ref="J?"  Part="1" 
 F 0 "J4" H 9525 6725 50  0000 L CNN
 F 1 "2 pin Molex header" H 9200 6650 50  0000 L CNN
-F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9575 6500 50  0001 C CNN
+F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 9575 6500 50  0001 C CNN
 F 3 "~" H 9575 6500 50  0001 C CNN
+F 4 "A-804" H 9575 6500 50  0001 C CNN "SKU"
+F 5 "Tayda" H 9575 6500 50  0001 C CNN "Vendor"
 	1    9575 6500
 	1    0    0    -1  
 $EndComp

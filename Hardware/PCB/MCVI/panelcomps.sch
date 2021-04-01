@@ -580,7 +580,7 @@ F 3 "~" H 1250 3325 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J?
+L ao_symbols:3_pin_Molex_connector J?
 U 1 1 5FAAC32F
 P 2375 3575
 AR Path="/5FAAC32F" Ref="J?"  Part="1" 
@@ -589,6 +589,8 @@ F 0 "J6" H 2375 3250 50  0000 C CNN
 F 1 "3 pin Molex connector" H 2375 3325 50  0000 C CNN
 F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 2375 3575 50  0001 C CNN
 F 3 "~" H 2375 3575 50  0001 C CNN
+F 4 "A-827" H 2375 3575 50  0001 C CNN "SKU"
+F 5 "Tayda" H 2375 3575 50  0001 C CNN "Vendor"
 	1    2375 3575
 	1    0    0    1   
 $EndComp
@@ -691,7 +693,7 @@ F 3 "" H 1250 5300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J?
+L ao_symbols:2_pin_Molex_connector J?
 U 1 1 5F9C6D0A
 P 2525 5400
 AR Path="/5F9C6D0A" Ref="J?"  Part="1" 
@@ -700,6 +702,8 @@ F 0 "J7" H 2475 5650 50  0000 L CNN
 F 1 "2 pin Molex connector" H 2100 5550 50  0000 L CNN
 F 2 "ao_tht:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 2525 5400 50  0001 C CNN
 F 3 "~" H 2525 5400 50  0001 C CNN
+F 4 "A-826" H 2525 5400 50  0001 C CNN "SKU"
+F 5 "Tayda" H 2525 5400 50  0001 C CNN "Vendor"
 	1    2525 5400
 	1    0    0    -1  
 $EndComp

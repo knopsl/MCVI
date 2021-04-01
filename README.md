@@ -2,7 +2,7 @@
 
 This project is adapted from [https://github.com/elkayem/midi2cv](https://github.com/elkayem/midi2cv). 
 
-To date the changes have been:
+Changes:
 
 * Converted the schematic to a KiCad project, revising it to use KiCad symbols 
 * Converted to Kosmo (or Eurorack) format by including a 10 pin ±12V power connector
