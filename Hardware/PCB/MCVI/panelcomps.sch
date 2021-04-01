@@ -709,6 +709,140 @@ Text Label 2275 5400 2    70   ~ 0
 MIDIPIN4_P
 Text Label 2125 3475 2    70   ~ 0
 SW3_P
-Text Label 2125 3675 2    70   ~ 0
+Text Label 2125 3575 2    70   ~ 0
 SW1_P
+Wire Notes Line
+	3350 6800 6250 6800
+$Comp
+L ao_symbols:MountingHole H1
+U 1 1 6069B2BC
+P 3625 7025
+F 0 "H1" H 3725 7071 50  0000 L CNN
+F 1 "MountingHole" H 3725 6980 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 3625 7025 50  0001 C CNN
+F 3 "" H 3625 7025 50  0001 C CNN
+F 4 "DNF" H 3625 7025 50  0001 C CNN "Config"
+	1    3625 7025
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:MountingHole H2
+U 1 1 6069B684
+P 3625 7225
+F 0 "H2" H 3725 7271 50  0000 L CNN
+F 1 "MountingHole" H 3725 7180 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 3625 7225 50  0001 C CNN
+F 3 "" H 3625 7225 50  0001 C CNN
+F 4 "DNF" H 3625 7225 50  0001 C CNN "Config"
+	1    3625 7225
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:MountingHole H3
+U 1 1 6069BD83
+P 3625 7425
+F 0 "H3" H 3725 7471 50  0000 L CNN
+F 1 "MountingHole" H 3725 7380 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 3625 7425 50  0001 C CNN
+F 3 "" H 3625 7425 50  0001 C CNN
+F 4 "DNF" H 3625 7425 50  0001 C CNN "Config"
+	1    3625 7425
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:MountingHole H4
+U 1 1 6069C19A
+P 3625 7650
+F 0 "H4" H 3725 7696 50  0000 L CNN
+F 1 "MountingHole" H 3725 7605 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 3625 7650 50  0001 C CNN
+F 3 "" H 3625 7650 50  0001 C CNN
+F 4 "DNF" H 3625 7650 50  0001 C CNN "Config"
+	1    3625 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:MountingHole H5
+U 1 1 6069CF61
+P 4450 7025
+F 0 "H5" H 4550 7071 50  0000 L CNN
+F 1 "MountingHole" H 4550 6980 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 4450 7025 50  0001 C CNN
+F 3 "" H 4450 7025 50  0001 C CNN
+F 4 "DNF" H 4450 7025 50  0001 C CNN "Config"
+	1    4450 7025
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:MountingHole H6
+U 1 1 6069CF68
+P 4450 7225
+F 0 "H6" H 4550 7271 50  0000 L CNN
+F 1 "MountingHole" H 4550 7180 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 4450 7225 50  0001 C CNN
+F 3 "" H 4450 7225 50  0001 C CNN
+F 4 "DNF" H 4450 7225 50  0001 C CNN "Config"
+	1    4450 7225
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:MountingHole H7
+U 1 1 6069CF6F
+P 4450 7425
+F 0 "H7" H 4550 7471 50  0000 L CNN
+F 1 "MountingHole" H 4550 7380 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 4450 7425 50  0001 C CNN
+F 3 "" H 4450 7425 50  0001 C CNN
+F 4 "DNF" H 4450 7425 50  0001 C CNN "Config"
+	1    4450 7425
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:MountingHole H8
+U 1 1 6069CF76
+P 4450 7650
+F 0 "H8" H 4550 7696 50  0000 L CNN
+F 1 "MountingHole" H 4550 7605 50  0000 L CNN
+F 2 "ao_tht:MountingHole_3.2mm_M3" H 4450 7650 50  0001 C CNN
+F 3 "" H 4450 7650 50  0001 C CNN
+F 4 "DNF" H 4450 7650 50  0001 C CNN "Config"
+	1    4450 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:Graphic GRAF1
+U 1 1 6069FC8F
+P 5450 7050
+F 0 "GRAF1" H 5728 7096 50  0000 L CNN
+F 1 "AO logo" H 5728 7005 50  0000 L CNN
+F 2 "ao_tht:analogoutput" H 5450 7050 50  0001 C CNN
+F 3 "" H 5450 7050 50  0001 C CNN
+F 4 "DNF" H 5450 7050 50  0001 C CNN "Config"
+	1    5450 7050
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:Graphic GRAF2
+U 1 1 606A00FE
+P 5450 7325
+F 0 "GRAF2" H 5728 7371 50  0000 L CNN
+F 1 "OSHW logo" H 5728 7280 50  0000 L CNN
+F 2 "ao_tht:OSHW-Logo2_7.3x6mm_SilkScreen" H 5450 7325 50  0001 C CNN
+F 3 "" H 5450 7325 50  0001 C CNN
+F 4 "DNF" H 5450 7325 50  0001 C CNN "Config"
+	1    5450 7325
+	1    0    0    -1  
+$EndComp
+$Comp
+L ao_symbols:Graphic GRAF3
+U 1 1 606A048B
+P 5450 7600
+F 0 "GRAF3" H 5728 7646 50  0000 L CNN
+F 1 "Panel holes" H 5728 7555 50  0000 L CNN
+F 2 "MCVI:MCVI_panel_holes" H 5450 7600 50  0001 C CNN
+F 3 "" H 5450 7600 50  0001 C CNN
+F 4 "DNF" H 5450 7600 50  0001 C CNN "Config"
+	1    5450 7600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

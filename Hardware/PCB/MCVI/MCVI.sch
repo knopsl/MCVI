@@ -90,20 +90,10 @@ F 3 "" H 4050 7475 50  0001 C CNN
 	1    4050 7475
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3350 7475 3650 7475
 Connection ~ 3650 7475
 Wire Wire Line
 	4050 7475 4300 7475
 Connection ~ 4300 7475
-Wire Wire Line
-	1850 7275 2400 7275
-Wire Wire Line
-	1850 7675 2400 7675
-Wire Wire Line
-	2700 7275 3100 7275
-Wire Wire Line
-	2700 7675 3100 7675
 Wire Wire Line
 	950  7375 950  7475
 Connection ~ 950  7475
@@ -1417,4 +1407,14 @@ Text Label 5575 3500 2    50   ~ 0
 PITCH_BEND_B
 Text Label 5575 4400 2    50   ~ 0
 CONTROL_B
+Wire Wire Line
+	2700 7675 3100 7675
+Wire Wire Line
+	2700 7275 3100 7275
+Wire Wire Line
+	3350 7475 3650 7475
+Wire Wire Line
+	1850 7675 2400 7675
+Wire Wire Line
+	1850 7275 2400 7275
 $EndSCHEMATC

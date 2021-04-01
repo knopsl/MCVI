@@ -1,6 +1,20 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# Graphic
+#
+DEF Graphic GRAF 0 40 Y Y 1 F N
+F0 "GRAF" 0 -150 50 H V C CNN
+F1 "Graphic" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "DNF" 0 0 50 H I C CNN "Config"
+DRAW
+T 0 0 0 100 0 0 0 ACME Normal 0 C C
+S -250 100 250 -100 0 0 0 f
+ENDDRAW
+ENDDEF
+#
 # LM3900N
 #
 DEF LM3900N U 0 5 Y Y 5 L N
@@ -50,6 +64,22 @@ X GND 1 -400 150 100 R 50 50 1 1 W
 X VCC 2 -400 50 100 R 50 50 1 1 W
 X SCL 3 -400 -50 100 R 50 50 1 1 I
 X SDA 4 -400 -150 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# MountingHole
+#
+DEF MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "MountingHole" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+F4 "DNF" 0 0 50 H I C CNN "Config"
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
 ENDDRAW
 ENDDEF
 #
