@@ -9,9 +9,9 @@ Generated from schematic by Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1
 | Refs | Qty | Component | Description | Vendor | SKU |
 | ----- | --- | ---- | ----------- | ---- | ---- |
 | A1 | 1 | Arduino_Nano_v3.x | Arduino Nano v3.x |  |  |
-| C1, C4, C5, C6, C7, C8, C9 | 7 | 0.1uF | Unpolarized capacitor |  |  |
-| C2, C3 | 2 | 10uF | Polarized capacitor |  |  |
-| C10, C11, C12, C13 | 4 | 33pF | Unpolarized capacitor |  |  |
+| C1, C4, C5, C6, C7, C8, C9 | 7 | 0.1uF | Ceramic capacitor |  |  |
+| C2, C3 | 2 | 10uF | Electrolytic capacitor |  |  |
+| C10, C11, C12, C13 | 4 | 33pF | Ceramic capacitor |  |  |
 | D1 | 1 | 1N4148 | 100V 0.15A standard switching diode, DO-35 |  |  |
 | D2, D3 | 2 | 1N5817 | Schottky diode |  |  |
 | D4 | 1 | Red LED | Light emitting diode |  |  |
@@ -37,4 +37,6 @@ Generated from schematic by Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1
 | R12, R14, R16, R18 | 4 | 470R | Resistor |  |  |
 | SW1 | 1 | SW_SPDT | Switch, single pole double throw |  |  |
 | U1 | 1 | 6N137 | Single High Speed LSTTL/TTL Compatible Optocoupler with enable, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8 |  |  |
-    
+| | 3 | | 8 pin DIP socket | | | | 
+| | 2 | | 14 pin DIP socket | | | | 
+   
