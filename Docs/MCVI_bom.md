@@ -36,7 +36,12 @@ Generated from schematic by Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1
 | R10 | 1 | 2k | Resistor |  |  |
 | R12, R14, R16, R18 | 4 | 470R | Resistor |  |  |
 | SW1 | 1 | SW_SPDT | Switch, single pole double throw |  |  |
-| U1 | 1 | 6N137 | Single High Speed LSTTL/TTL Compatible Optocoupler with enable, dV/dt 1000/us, VCM 10, max 7V VCC, DIP-8 |  |  |
+| U1 | 1 | 6N137 | Optocoupler, DIP-8 |  |  |
 | | 3 | | 8 pin DIP socket | | | | 
 | | 2 | | 14 pin DIP socket | | | | 
+| | 2 | | 15 pin header | | | |
+| | 8 | | M3 6 mm screws | | | |
+| | 8 | | M3 washers | | | |
+| | 4 | | M3 10 mm spacers | | | |
    
+Yes, there's IC1 and IC2 and DAC1 and DAC2 and U1. Sorry.

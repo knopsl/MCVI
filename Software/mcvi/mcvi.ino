@@ -22,7 +22,6 @@
 
   License: GPL3 as above.
 */
-
 #include <MIDI.h>
 #include <SPI.h>
 
@@ -69,7 +68,6 @@ void setup()
   SPI.begin();
 
   MIDI.begin(CHANNEL);
-
 
   // Set initial pitch bend voltage to 0.5V (mid point).  With Gain = 1X, this is 1023
   // Other DAC outputs will come up as 0V, so don't need to be initialized
@@ -141,7 +139,6 @@ void loop()
 	case midi::NoteOn:
 	case midi::NoteOff:
 	  noteMsg = MIDI.getData1() - 21; // A0 = 21, Top Note = 108
-
 	  if ((noteMsg < 0) || (noteMsg > 87)) 
 	    break; // Only 88 notes of keyboard are supported
 
@@ -163,8 +160,7 @@ void loop()
 	  // Pins NP_SEL1 and NP_SEL2 indictate note priority
 	  S1 = digitalRead(NP_SEL1);
 	  S2 = digitalRead(NP_SEL2);
-
-	  if (S1 && S2)
+	  if (S1 && !S2)
 	    commandTopNote(); // Highest note priority
 	  else if (!S1 && S2)
 	    commandBottomNote(); // Lowest note priority
