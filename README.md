@@ -11,7 +11,7 @@ Pitch bend CV range is 0 to +1.0 V (0.5 V when centered). Velocity and modulatio
 The module is built around an Arduino Nano. The sketch uses the standard MIDI and SPI libraries.
 
 ## Documentation
-* [Build notes and calibration](Docs/build_notes.md) 
+* [Build notes](Docs/build_notes.md) 
 * [Schematic](Docs/MCVI.pdf)
 * [BOM](Docs/MCVI_bom.pdf)
 
