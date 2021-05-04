@@ -298,8 +298,11 @@ void setVoltage(int dacpin, bool channel, bool gain, unsigned int mV)
 {
   unsigned int command = channel ? 0x9000 : 0x1000;
 
+  if (mV > 4095)
+    mV = 4095;
+  
   command |= gain ? 0x0000 : 0x2000;
-  command |= (mV & 0x0FFF);
+  command |= mV;
 
   SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
   digitalWrite(dacpin, LOW);
