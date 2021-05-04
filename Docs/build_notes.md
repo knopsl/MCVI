@@ -30,6 +30,8 @@ See photos.
 
 ## Calibration
 
-Connect a MIDI keyboard and measure voltages at the pitch CV output for different notes. A1 (lowest note on an 88 note keyboard) should produce 0 V — probably a few mV offset in reality — and each higher A should be 1.000 V higher, preferably within about 5 mV. C8 (last note on an 88 note keyboard) should produce 7.25 V. If you find each octave is systematically less than or more than 1.000 V there's a constant in the code (near the bottom) you can change to adjust the tuning. 
+Connect a MIDI keyboard and measure voltages at the pitch CV output for different notes. A1 (lowest note on an 88 note keyboard) should produce 0 V — probably a few mV offset in reality — and each higher A should be 1.000 V higher, preferably within about 5 mV. C8 (last note on an 88 note keyboard) should produce 7.25 V. If you find each octave is systematically less than or more than 1.000 V there's a constant scale factor in the code (near the bottom) you can change to adjust the tuning. 
 
-Even after such adjustment, DAC nonlinearity can result in inaccurate voltages at some level. I found I could get everything in the middle octaves within 5 cents (corresponding to 4 mV) of the correct value, with larger errors in the top and bottom octave or so. I also found I could get significantly better results with one MCP4822 chip than with another one, so you might want to test several and pick the one that performs best.
+Even after such adjustment, DAC nonlinearity can result in inaccurate voltages at some level. I found I could get everything in the middle octaves within 5 cents (corresponding to 4 mV) of the correct value, with larger errors in the top and bottom octave or so. 
+
+You might want to test several DAC chips and pick the one that performs best. The MCP4822 datasheet says the tolerance on the internal reference voltage is ±2%, and that will affect the scale factor. There also can be significant differences in linearity.
